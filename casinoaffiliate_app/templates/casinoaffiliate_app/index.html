@@ -78,6 +78,26 @@
             </div>
         </section>
 
+        <!-- <section id="top-casinos" class="top-casinos py-8 md:py-32">
+            <div class="title mb-2 sm:mb-8">
+                <h6 class="text-[32px] text-white text-center font-semibold">
+                    En İyi Casinolar
+                </h6>
+            </div>
+
+            <div class="best-casinos-list flex flex-col gap-y-8">
+                
+                {% for casino in casinos %}
+                <div class="swiper-slide ">
+                    {% include 'casinoaffiliate_app/components/casino-index-list-casinos.html' with casino=casino %}
+                {% include 'casinoaffiliate_app/components/casino-small-card-mobile.html' with casino=casino %}
+
+                </div>
+                {% endfor %}
+
+            </div>
+        </section> -->
+
         <section class="tunnel py-4 bg-black">
             <div class="h-[250px] sm:h-[450px] flex gap-x-8">
                 <!-- <div
@@ -149,29 +169,6 @@
                 </div>
 
             </div>
-        </section>
-
-        <section id="top-casinos" class="top-casinos py-8 md:py-32">
-            <div class="title mb-2 sm:mb-8">
-                <h6 class="text-[32px] text-white text-center font-semibold">
-                    En İyi Casinolar
-                </h6>
-            </div>
-
-            <!-- casinos -->
-            <div class="best-casinos-list flex flex-col gap-y-8">
-                <!-- casino -->
-                
-                {% for casino in casinos %}
-                <div class="swiper-slide ">
-                    {% include 'casinoaffiliate_app/components/casino-index-list-casinos.html' with casino=casino %}
-                {% include 'casinoaffiliate_app/components/casino-small-card-mobile.html' with casino=casino %}
-
-                </div>
-                {% endfor %}
-
-            </div>
-
         </section>
 
         <!-- hurry-up -->
@@ -300,7 +297,7 @@
 
                     </div>
                     <div class="basis-5/6 flex gap-x-4">
-                        <input type="text" id="large-input" placeholder="Enter Your E-Mail Adress"
+                        <input type="text" id="large-input"
                             class="block w-full p-4 text-xs sm:text-base !outline-none placeholder-zinc-950">
                         <button type="button" class="px-5 py-3 text-sm sm:text-base font-semibold text-center inline-flex items-center
                     text-white bg-amber-500 !outline-none hover:bg-amber-600">
