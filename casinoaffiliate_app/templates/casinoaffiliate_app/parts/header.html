@@ -12,13 +12,13 @@
   <nav class="hidden col-span-3 md:block md:w-full">
     <ul class="flex items-center h-full gap-x-8 justify-start">
       <li id="home" class="text-lg text-white font-semibold">
-        <a href="{% url 'index' %}">Home</a>
+        <a href="{% url 'index' %}">Ana Sayfa</a>
       </li>
       <li id="why-we" class="text-lg text-white font-semibold">
-        <a href="{% url 'index' %}">About</a>
+        <a href="{% url 'index' %}">Hakkımızda</a>
       </li>
       <li id="top-casinos" class="text-lg text-white font-semibold">
-        <a href="{% url 'index' %}">Casinos</a>
+        <a href="{% url 'index' %}">Casinolar</a>
       </li>
       <!-- <li class="text-lg text-white font-semibold">
         <a href="{% url 'index' %}" id="top-casinos">Top Casinos</a>
@@ -52,10 +52,10 @@
   {% else %}
   <div class="hidden md:flex col-span-2 justify-end items-center basis-full gap-x-4">
     <a href="{% url 'login' %}" class="text-white">
-      <span>Log In</span>
+      <span>Üye Girişi</span>
     </a>
     <a href="{% url 'register' %}" class="font-medium text-white bg-amber-400 px-2 py-2 rounded-lg">
-      <span>Sign Up</span>
+      <span>Kayıt Ol</span>
     </a>
   </div>
   {% endif %}
@@ -76,10 +76,10 @@
     <nav class="w-full">
       <ul class="flex flex-col items-center h-full gap-x-8 justify-center">
         <li id="home" class="text-lg text-white font-semibold mb-2 border-b-2 border-zinc-800 px-2 py-1">
-          <a href="{% url 'index' %}">Home</a>
+          <a href="{% url 'index' %}">Ana Sayfa</a>
         </li>
         <li id="home" class="text-lg text-white font-semibold mb-2 border-b-2 border-zinc-800 px-2 py-1">
-          <a href="{% url 'index' %}">Casinos</a>
+          <a href="{% url 'index' %}">Casinolar</a>
         </li>
       </ul>
     </nav>
