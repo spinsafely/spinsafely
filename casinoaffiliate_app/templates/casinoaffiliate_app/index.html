@@ -20,7 +20,7 @@
                 <!-- slider left -->
                 <div class="basis-6/6 p-8 sm:basis-4/6">
                     <h1 class="font-bold text-zinc-200 text-[28px] lg:text-[64px] leading-tight">
-                         
+                        Ödeme alamadığınızda 7/24 Destek
                         <span class="inline-block relative text-[36px] lg:text-[72px] text-white">
                             <svg xmlns="http://www.w3.org/2000/svg" width="100%" height="auto" style="
                                 position: absolute;
@@ -33,9 +33,9 @@
                                     transform="translate(-402.801 -501.46)" fill="none" stroke="#ff9f0f"
                                     stroke-linecap="round" stroke-width="3"></path>
                             </svg>
-                            Güvenilir
+                            Garantör
                         </span>
-                        Casinoları Bulmanıza Yardımcı Olalım
+                        
                     </h1>
                     <p class="mt-4 text-zinc-100 font-light">
                         saglamcasinolar.com , oynanabilir ve güvenli casinolara erişiminizi sağlar -
@@ -57,17 +57,15 @@
 
     <div class="main">
         <!-- top rated casinos -->
-        <section id="top-rated-casinos" class="top-rated-casinos justify-center w-full bg-neutral-900 py-8 md:pb-24">
+        <!-- <section id="top-rated-casinos" class="top-rated-casinos justify-center w-full bg-neutral-900 py-8 md:pb-24">
             <div class="title mb-4 mt-4 sm:mb-8">
                 <h3 class="text-[32px] text-white text-center font-semibold">
                     En İyi Casinolar
                 </h3>
             </div>
 
-            <!-- top casinos list -->
             <div class="top-casinos-list w-12/12 2xl:w-9/12 swiper">
                 <div class="swiper-wrapper">
-                    <!-- casino -->
                     {% for casino in casinos %}
                     <div class="swiper-slide">
                         {% include 'casinoaffiliate_app/components/casino-small-card.html' with casino=casino %}
@@ -76,8 +74,30 @@
 
                 </div>
             </div>
-        </section>
+        </section> -->
 
+        <section id="top-casinos" class="top-casinos py-8 md:py-32">
+            <div class="title mb-2 sm:mb-8">
+                <h6 class="text-[32px] text-white text-center font-semibold">
+                    En İyi Casinolar
+                </h6>
+            </div>
+
+            <!-- casinos -->
+            <div class="best-casinos-list flex flex-col gap-y-8">
+                <!-- casino -->
+                
+                {% for casino in casinos %}
+                <div class="swiper-slide ">
+                    {% include 'casinoaffiliate_app/components/casino-index-list-casinos.html' with casino=casino %}
+                {% include 'casinoaffiliate_app/components/casino-small-card-mobile.html' with casino=casino %}
+
+                </div>
+                {% endfor %}
+
+            </div>
+
+        </section>
         <section class="tunnel py-4 bg-black">
             <div class="h-[250px] sm:h-[450px] flex gap-x-8">
                 <!-- <div
@@ -151,28 +171,6 @@
             </div>
         </section>
 
-        <section id="top-casinos" class="top-casinos py-8 md:py-32">
-            <div class="title mb-2 sm:mb-8">
-                <h6 class="text-[32px] text-white text-center font-semibold">
-                    En İyi Casinolar
-                </h6>
-            </div>
-
-            <!-- casinos -->
-            <div class="best-casinos-list flex flex-col gap-y-8">
-                <!-- casino -->
-                
-                {% for casino in casinos %}
-                <div class="swiper-slide ">
-                    {% include 'casinoaffiliate_app/components/casino-index-list-casinos.html' with casino=casino %}
-                {% include 'casinoaffiliate_app/components/casino-small-card-mobile.html' with casino=casino %}
-
-                </div>
-                {% endfor %}
-
-            </div>
-
-        </section>
 
         <!-- hurry-up -->
         <section class="hurry-up rounded-xl py-8 md:py-16 mx-3">
