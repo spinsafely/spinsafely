@@ -1,0 +1,569 @@
+{% extends 'casinoaffiliate_app/base.html' %}
+
+{% block header %}
+<!-- header -->
+<header class="flex sticky top-0 z-50 bg-[#0b0f1a] backdrop-blur-md justify-center">
+    {% include 'casinoaffiliate_app/parts/header.html' %}
+</header>
+{% endblock %}
+
+{% block content %}
+<div class="page justify-content
+    bg-black bg-center bg-cover bg-no-repeat bg-[url('/static/casinoaffiliate_app/imgs/bg.png')]">
+
+    <!-- slider -->
+    <div class="page-initial bg-cover bg-no-repeat bg-[url('/static/casinoaffiliate_app/imgs/slider-bg.jpg')]">
+        <!-- slider content -->
+        <div class="flex justify-center">
+            <div class="flex w-full xl:w-9/12 items-center">
+
+                <!-- slider left -->
+                <div class="basis-6/6 p-8 sm:basis-4/6">
+                    <h1 class="font-bold text-zinc-200 text-[28px] lg:text-[64px] leading-tight">
+                        Helping you find the
+                        <span class="inline-block relative text-[36px] lg:text-[72px] text-white">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="100%" height="auto" style="
+                                position: absolute;
+                                top: 85%;
+                                left: 0%;
+                                height: auto;
+                                width: 100%;" viewBox="0 0 250.846 10.274">
+                                <path id="Path_57522" data-name="Path 57522"
+                                    d="M404.495,510.04S497.4,497,652.059,506.387"
+                                    transform="translate(-402.801 -501.46)" fill="none" stroke="#ff9f0f"
+                                    stroke-linecap="round" stroke-width="3"></path>
+                            </svg>
+                            trusted
+                        </span>
+                        casinos
+                    </h1>
+                    <p class="mt-4 text-zinc-100 font-light">
+                        TrustCasinos.com has been helping players to play reliable casinos -
+                        <span class="inline-block break-after-column text-zinc-100 font-light">
+                            discover how we can help you
+                        </span>
+                    </p>
+                </div>
+
+                <!-- slider right -->
+                <div class="hidden sm:flex sm:basis-2/6" id="scene">
+                    <div data-depth="1.2">
+                        <img src="/static/casinoaffiliate_app/imgs/slider-right.png" alt="" />
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="main">
+        <!-- top rated casinos -->
+        <section id="top-rated-casinos" class="top-rated-casinos justify-center w-full bg-neutral-900 py-8 md:pb-24">
+            <div class="title mb-4 mt-4 sm:mb-8">
+                <h3 class="text-[32px] text-white text-center font-semibold">
+                    Top Casinos
+                </h3>
+            </div>
+
+            <!-- top casinos list -->
+            <div class="top-casinos-list w-12/12 2xl:w-9/12 swiper">
+                <div class="swiper-wrapper">
+                    <!-- casino -->
+                    {% for casino in casinos %}
+                    <div class="swiper-slide">
+                        {% include 'casinoaffiliate_app/components/casino-small-card.html' with casino=casino %}
+                    </div>
+                    {% endfor %}
+
+                </div>
+            </div>
+        </section>
+
+        <section class="tunnel py-4 bg-black">
+            <div class="h-[250px] sm:h-[450px] flex gap-x-8">
+                <!-- <div
+                    class="w-2/12 flex hidden sm:flex justify-start bg-no-repeat opacity-90 bg-right bg-[url('/static/casinoaffiliate_app/imgs/footerleft.png')]">
+                </div> -->
+
+                <div class="p-4 sm:p-0 sm:w-12/12 flex-col  gap-y-4 justify-center items-center m-auto">
+                    <div class="text-center mb-8">
+                        <p class="text-white leading-9 font-semibold text-[36px] mb-4 sm:mb-0 basis-1/6">
+                            Easily access blocked websites.
+                        </p>
+                        <span class="text-zinc-100 text-sm font-light">
+                            Hide your IP and encrypt your internet connection.
+                        </span>
+
+                    </div>
+                    <div class="basis-5/6 flex gap-x-4">
+                        <input type="text" id="large-input" placeholder="Enter Address"
+                            class="block w-full p-4 text-xs sm:text-base !outline-none placeholder-zinc-950">
+                        <button type="button" class="px-5 py-3 text-sm sm:text-base font-semibold text-center inline-flex items-center
+                    text-white bg-amber-500 !outline-none hover:bg-amber-600">
+                        <span class="fa-solid fa-door-open mr-2"></span>
+                            GO
+                        </button>
+                    </div>
+
+                </div>
+                <!-- <div
+                    class="w-2/12 hidden sm:flex justify-end bg-no-repeat opacity-90 bg-bottom bg-[url('/static/casinoaffiliate_app/imgs/footerright.png')]">
+                </div> -->
+            </div>
+        </section>
+
+        <!-- jumbotron  -->
+        <section id="why-we" class="jumbotron why-we relative py-8 md:py-32">
+            {% include 'casinoaffiliate_app/components/index_intro.html' %}
+        </section>
+
+        <!-- how it works -->
+        <section class="how-it-works bg-neutral-900 py-4 hidden sm:block mt-16">
+            <div class="w-9/12 flex m-auto items-center justify-center gap-x-8">
+                <div class="text-zinc-100 text-xl font-semibold">How It Works?</div>
+                <div class="mx-12">
+                    <ol
+                        class="flex items-center w-full bg-neutral-800 text-sm font-medium px-12 py-4 gap-x-16 text-center text-zinc-100 rounded-lg shadow-sm">
+                        <li class="flex items-center">
+                            <p>
+                                <span class="font-semibold text-xl">Sign Up</span>
+                                <span class="block text-zinc-400 font-light text-base">via our links</span>
+                            </p>
+                        </li>
+
+                        <li class="flex items-center">
+                            <p>
+                                <span class="font-semibold text-xl">Play</span>
+                                <span class="block text-zinc-400 font-light text-base">go for it</span>
+                            </p>
+                        </li>
+                        <li class="flex items-center">
+                            <p>
+                                <span class="font-semibold text-xl">Cash Out</span>
+                                <span class="block text-zinc-400 font-light text-base">your winnings</span>
+                            </p>
+                        </li>
+                    </ol>
+                </div>
+                <div class="text-zinc-300 text-base font-base text-center">Payouts in:
+                    <span class="text-zinc-100 block text-lg font-semibold">5 Min.</span>
+                </div>
+
+            </div>
+        </section>
+
+        <section id="top-casinos" class="top-casinos py-8 md:py-32">
+            <div class="title mb-2 sm:mb-8">
+                <h6 class="text-[32px] text-white text-center font-semibold">
+                    Top Casinos
+                </h6>
+            </div>
+
+            <!-- casinos -->
+            <div class="best-casinos-list flex flex-col gap-y-8">
+                <!-- casino -->
+                
+                {% for casino in casinos %}
+                <div class="swiper-slide ">
+                    {% include 'casinoaffiliate_app/components/casino-index-list-casinos.html' with casino=casino %}
+                {% include 'casinoaffiliate_app/components/casino-small-card-mobile.html' with casino=casino %}
+
+                </div>
+                {% endfor %}
+
+            </div>
+
+        </section>
+
+        <!-- hurry-up -->
+        <section class="hurry-up rounded-xl py-8 md:py-16 mx-3">
+            <div class="title mb-2 sm:mb-8">
+                <h6 class="text-[32px] text-white text-center font-semibold">
+                    Special Offer
+                </h6>
+            </div>
+            <div class="text-white w-full h-full text-center grid rounded-xl min-h-[500px]
+                bg-center bg-cover bg-[url('/static/casinoaffiliate_app/imgs/hurryup-banner.jpg')]">
+                <!-- overlay -->
+                <div class="col-start-1 row-start-1 bg-amber-900 py-4 bg-opacity-60 w-full h-full rounded-xl"></div>
+
+                <!-- content -->
+                <div class="col-start-1 row-start-1 mx-auto my-auto py-4">
+                    <p class="text-zinc-100 text-[16px] sm:text-[24px] font-semibold">HURRY UP!</p>
+                    <p class="text-white text-[24px] sm:text-[64px] font-bold">%100 Deposit Bonus</p>
+
+                    <div class="grid grid-flow-col counter justify-center text-center auto-cols-max mt-8 sm:gap-x-8">
+
+                            <div class="flex flex-col p-2 rounded-box text-zinc-100 font-semibold">
+                            <span class=" day font-bold text-zinc-100 text-xl sm:text-5xl">
+                                <span class='days'>00</span>
+                            </span>
+                            Days
+                        </div>
+                        <div class="flex flex-col p-2 rounded-box text-zinc-100 font-semibold">
+                            <span class=" hour font-bold text-zinc-100 text-xl sm:text-5xl">
+                                <span class='hours'>00</span>
+                            </span>
+                            Hours
+                        </div>
+                        <div class="flex flex-col p-2 rounded-box text-zinc-100 font-semibold">
+                            <span class="min font-bold text-zinc-100 text-xl sm:text-5xl">
+                                <span class='minutes'>00</span>
+                            </span>
+                            Minutes
+                        </div>
+                        <div class="flex flex-col p-2 rounded-box text-zinc-100 font-semibold">
+                            <span class=" sec font-bold text-zinc-100 text-xl sm:text-5xl">
+                                <span class='seconds'>00</span>
+                            </span>
+                            Seconds
+                        </div>
+                    </div>
+
+                    <button type="button"
+                        class="text-white mt-8 bg-amber-500 hover:bg-amber-700 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-base sm:text-lg px-5 py-2.5 text-center inline-flex items-center">
+                        <a href="{% url 'casino' 'asd' %}">Go Casino</a>
+                        <svg class="rtl:rotate-180 w-3.5 h-3.5 ms-2" aria-hidden="true"
+                            xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 14 10">
+                            <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                d="M1 5h12m0 0L9 1m4 4L9 9" />
+                        </svg>
+                    </button>
+
+                </div>
+            </div>
+        </section>
+
+
+        <div class="relative flex overflow-x-hidden mb-8">
+            <div class="py-12 animate-marquee whitespace-nowrap">
+                <p class="bg-gradient-to-r font-semibold text-[168px] from-amber-900 via-amber-500 to-amber-500
+                inline-block text-transparent bg-clip-text">
+                    slot&nbsp;♢&nbsp;
+                </p>
+                <p class="bg-gradient-to-r font-semibold text-[168px] from-amber-500 via-pink-700 to-pink-700
+                inline-block text-transparent bg-clip-text">
+                    blackjack&nbsp;♤&nbsp;
+                </p>
+                <p class="bg-gradient-to-r font-semibold text-[168px] from-pink-700 via-pink-300 to-emerald-600
+                inline-block text-transparent bg-clip-text">
+                    roulette&nbsp;♡&nbsp;
+                </p>
+                <p class="bg-gradient-to-r font-semibold text-[168px] from-emerald-600 via-emerald-900 to-emerald-300
+                inline-block text-transparent bg-clip-text">
+                    freespin&nbsp;♧&nbsp;
+                </p>
+                <p class="bg-gradient-to-r font-semibold text-[168px] from-emerald-600 via-emerald-900 to-emerald-300
+                inline-block text-transparent bg-clip-text">
+                    bonus&nbsp;♢&nbsp;
+                </p>
+            </div>
+
+            <div class="absolute top-0 py-12 animate-marquee2 whitespace-nowrap">
+                <p class="bg-gradient-to-r font-semibold text-[168px] from-amber-900 via-amber-500 to-amber-500
+                inline-block text-transparent bg-clip-text">
+                    slot&nbsp;♤&nbsp;
+                </p>
+                <p class="bg-gradient-to-r font-semibold text-[168px] from-amber-500 via-pink-700 to-pink-700
+                inline-block text-transparent bg-clip-text">
+                    blackjack&nbsp;♡&nbsp;
+                </p>
+                <p class="bg-gradient-to-r font-semibold text-[168px] from-pink-700 via-pink-300 to-emerald-600
+                inline-block text-transparent bg-clip-text">
+                    roulette&nbsp;♧&nbsp;
+                </p>
+                <p class="bg-gradient-to-r font-semibold text-[168px] from-emerald-600 via-emerald-900 to-emerald-300
+                inline-block text-transparent bg-clip-text">
+                    freespin&nbsp;♢&nbsp;
+                </p>
+                <p class="bg-gradient-to-r font-semibold text-[168px] from-emerald-600 via-emerald-900 to-emerald-300
+                inline-block text-transparent bg-clip-text">
+                    bonus&nbsp;♤&nbsp;
+                </p>
+            </div>
+        </div>
+
+        <section class="subscribe py-8 md:py-16">
+            <div class="h-[250px] sm:h-[450px] flex gap-x-8">
+                <div
+                    class="w-2/12 flex hidden sm:flex justify-start bg-no-repeat opacity-90 bg-right bg-[url('/static/casinoaffiliate_app/imgs/footerleft.png')]">
+                </div>
+
+                <div class="p-4 sm:p-0 sm:w-8/12 flex-col sm:flex gap-y-4 justify-center items-center m-auto">
+                    <div class="text-center mb-4">
+                        <p class="text-white leading-9 font-semibold text-[36px] mb-4 sm:mb-0 basis-1/6">
+                            Never miss a bonus offer again!
+                        </p>
+                        <span class="text-zinc-100 text-sm font-light">
+                            Receive each bonus offer we have available.
+                            No spam - pinky swear!
+                        </span>
+
+                    </div>
+                    <div class="basis-5/6 flex gap-x-4">
+                        <input type="text" id="large-input" placeholder="Enter Your E-Mail Adress"
+                            class="block w-full p-4 text-xs sm:text-base !outline-none placeholder-zinc-950">
+                        <button type="button" class="px-5 py-3 text-sm sm:text-base font-semibold text-center inline-flex items-center
+                    text-white bg-amber-500 !outline-none hover:bg-amber-600">
+                            <svg class="w-3 h-3 sm:w-5 sm:h-3 text-white me-2" aria-hidden="true"
+                                xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 20 16">
+                                <path
+                                    d="m10.036 8.278 9.258-7.79A1.979 1.979 0 0 0 18 0H2A1.987 1.987 0 0 0 .641.541l9.395 7.737Z" />
+                                <path
+                                    d="M11.241 9.817c-.36.275-.801.425-1.255.427-.428 0-.845-.138-1.187-.395L0 2.6V14a2 2 0 0 0 2 2h16a2 2 0 0 0 2-2V2.5l-8.759 7.317Z" />
+                            </svg>
+                            SUBSCRIBE
+                        </button>
+                    </div>
+
+                </div>
+                <div
+                    class="w-2/12 hidden sm:flex justify-end bg-no-repeat opacity-90 bg-bottom bg-[url('/static/casinoaffiliate_app/imgs/footerright.png')]">
+                </div>
+            </div>
+        </section>
+    </div>
+
+</div>
+
+<style>
+    .subscribe {
+        background-image: linear-gradient(90deg, #837c1a 0%, #0F030B 100%);
+    }
+
+    .wrapper {
+        width: 100%;
+        height: 65px;
+        position: fixed;
+        margin: auto;
+        background: #000;
+        overflow: hidden;
+        bottom: 50%;
+    }
+
+    .box {
+        height: 65px;
+        position: absolute;
+        background: transparent;
+        font-size: 30px;
+        line-height: 65px;
+        text-align: center;
+        color: #fff;
+        text-transform: uppercase;
+    }
+
+    .boxes {
+        position: relative;
+    }
+</style>
+
+<style>
+    .normal.zap-border::after {
+        height: calc(50% + 2px);
+        top: 0;
+    }
+
+    .normal.zap-border::after,
+    .normal.zap-border::before {
+        border-right: 5px solid;
+        content: "";
+        position: absolute;
+        right: -10px;
+        transform: skewX(-10deg);
+        width: 20px;
+        border-color: #FFF;
+        z-index: 0;
+        background-color: #FFF;
+    }
+
+    .normal.zap-border::before {
+        border-top: 3px solid;
+        bottom: 0;
+        height: 50%;
+        border-color: #FFF;
+        background-color: #FFF;
+    }
+
+    .normal.zap-border {
+        border-color: #FFF;
+    }
+</style>
+
+<script>
+    initMarquee(190, 27)
+
+    function initMarquee(boxWidth, time) {
+        const boxElement = $('.box');
+        const boxLength = boxElement.length;
+        const wrapperWidth = boxWidth * boxLength;
+        const windowWidth = $(window).width();
+
+        boxElement.parent().css('left', '-' + boxWidth + 'px');
+        boxElement.css('width', boxWidth + 'px');
+
+        gsap.set(".box", {
+            x: (i) => i * boxWidth
+        });
+
+        gsap.to(".box", {
+            duration: time,
+            ease: "none",
+            x: "-=" + wrapperWidth,
+            modifiers: {
+                x: gsap.utils.unitize(
+                    function (x) {
+                        return parseFloat(x + windowWidth + boxWidth) % wrapperWidth
+                    }
+                )
+            },
+            repeat: -1
+        });
+
+    }
+</script>
+
+<script>
+    const swiper = new Swiper('.swiper', {
+        // Optional parameters
+        direction: 'horizontal',
+        loop: false,
+        slidesPerView: 1,
+        autoplay: {
+            delay: 4000,
+        },
+
+        breakpoints: {
+            960: {
+                slidesPerView: 2,
+            },
+            1165: {
+                slidesPerView: 3,
+            },
+        }
+    });
+</script>
+
+<script>
+    var scene = document.getElementById("scene");
+    var parallaxInstance = new Parallax(scene);
+
+    var sloticon1 = document.getElementById("slot-icon-2");
+    var parallaxInstance = new Parallax(sloticon1);
+
+    var topScroll = $('section#why-we').height();
+
+    gsap.registerPlugin(ScrollTrigger);
+    const tl1 = gsap.timeline({
+        scrollTrigger: {
+            trigger: ".why-we",
+            scrub: 1,
+            start: "top center",
+            markers: false,
+        },
+    });
+    tl1.to(".slot-icon-1", { y: topScroll, rotation: 0, duration: 15 });
+
+    gsap.registerPlugin(ScrollTrigger);
+    const tl2 = gsap.timeline({
+        scrollTrigger: {
+            trigger: ".why-we",
+            scrub: 1,
+            start: "top center",
+            markers: false,
+        },
+    });
+    tl2.to(".slot-icon-2", { y: topScroll, rotation: 0, duration: 15 });
+</script>
+
+<script>
+var timer;
+
+var compareDate = new Date('2024-05-02');
+
+timer = setInterval(function() {
+  timeBetweenDates(compareDate);
+}, 1000);
+
+function timeBetweenDates(toDate) {
+  var dateEntered = toDate;
+  var now = new Date();
+  var difference = dateEntered.getTime() - now.getTime();
+
+  if (difference <= 0) {
+
+    // Timer done
+    clearInterval(timer);
+  
+  } else {
+    
+    var seconds = Math.floor(difference / 1000);
+    var minutes = Math.floor(seconds / 60);
+    var hours = Math.floor(minutes / 60);
+    var days = Math.floor(hours / 24);
+
+    hours %= 24;
+    minutes %= 60;
+    seconds %= 60;
+
+    $(".days").text(days);
+    $(".hours").text(hours);
+    $(".minutes").text(minutes);
+    $(".seconds").text(seconds);
+  }
+}
+</script>
+
+<script>
+    $(window).scroll(function() {    
+        var scroll = $(window).scrollTop();    
+        if (scroll >= 0.1 * $(window).height()) {
+            $("header").addClass('!bg-transparent');
+        } else {
+            $("header").removeClass('!bg-transparent');
+        }
+    });
+
+    $(document).ready(function () {
+        $("li#home").click(function (e) {
+          e.preventDefault()
+            $("html").animate(
+                {
+                    scrollTop: 0
+                },
+                800 //speed
+            );
+        });
+        $("li#why-we").click(function (e) {
+          e.preventDefault()
+            $("html").animate(
+                {
+                    scrollTop: $("section#why-we").offset().top
+                },
+                800 //speed
+            );
+        });
+        $("li#top-casinos").click(function (e) {
+            e.preventDefault()
+            $("html").animate(
+                {
+                    scrollTop: $("section#top-casinos").offset().top
+                },
+                800 //speed
+            );
+        });
+    });
+</script>
+
+<!--Start of Tawk.to Script-->
+<script type="text/javascript">
+    var Tawk_API=Tawk_API||{}, Tawk_LoadStart=new Date();
+    (function(){
+    var s1=document.createElement("script"),s0=document.getElementsByTagName("script")[0];
+    s1.async=true;
+    s1.src='https://embed.tawk.to/66310762a0c6737bd132da8a/1hsno9mke';
+    s1.charset='UTF-8';
+    s1.setAttribute('crossorigin','*');
+    s0.parentNode.insertBefore(s1,s0);
+    })();
+    </script>
+    <!--End of Tawk.to Script-->
+{% endblock %}

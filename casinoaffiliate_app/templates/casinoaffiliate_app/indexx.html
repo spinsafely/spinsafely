@@ -1,0 +1,763 @@
+{% extends 'casinoaffiliate_app/base.html' %} {% block content %}
+<div
+  class="page justify-content bg-black bg-center bg-cover bg-no-repeat bg-[url('/static/casinoaffiliate_app/imgs/bg.png')]">
+  <!-- header & slide content -->
+  <div
+    class="page-initial bg-cover bg-no-repeat bg-[url('https://www.taikostudios.com/uploads/5/5/4/2/55420031/5-3-mattepainting_orig.jpg')]">
+    <!-- header -->
+    <header class="flex justify-center">
+      {% include 'casinoaffiliate_app/parts/header.html' %}
+    </header>
+
+    <!-- slide content -->
+    <div class="flex justify-center">
+      <div class="flex w-full xl:w-9/12 items-center">
+        <!-- slide left -->
+        <div class="basis-6/6 p-8 sm:basis-4/6">
+          <h1 class="font-bold text-zinc-200 text-[28px] lg:text-[64px] leading-tight">
+            Helping you find the
+            <span class="inline-block relative text-[36px] lg:text-[72px] text-white">
+              <svg xmlns="http://www.w3.org/2000/svg" width="100%" height="auto" style="
+                  position: absolute;
+                  top: 85%;
+                  left: 0%;
+                  height: auto;
+                  width: 100%;
+                " viewBox="0 0 250.846 10.274">
+                <path id="Path_57522" data-name="Path 57522" d="M404.495,510.04S497.4,497,652.059,506.387"
+                  transform="translate(-402.801 -501.46)" fill="none" stroke="#ff9f0f" stroke-linecap="round"
+                  stroke-width="3"></path>
+              </svg>
+              trusted
+            </span>
+            casinos
+          </h1>
+          <p class="mt-4 text-zinc-100 font-light">
+            TrustCasinos.com has been helping players to play reliable casinos -
+          <p class="inline-block break-after-column text-zinc-100 font-light">
+            discover how we can help you</p>
+          </p>
+        </div>
+        <!-- slide right -->
+        <div class="hidden sm:flex sm:basis-2/6" id="scene">
+          <div data-depth="0.6">
+            <img src="https://elk-studioscom.cdn.triggerfish.cloud/uploads/2020/02/horse_knight-1333x1600.png" alt="" />
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- main -->
+  <div class="main">
+    <!-- top casinos -->
+    <section class="top-casinos justify-center w-full bg-neutral-900 p-4 sm:p-16">
+      <div class="title mb-4 mt-4 sm:mb-8">
+        <h3 class="text-[32px] text-white text-center font-semibold">
+          Top Trusted Casinos
+        </h3>
+      </div>
+
+      <!-- top casinos list -->
+      <div class="top-casinos-list m-auto gap-x-8 max-w-[375px] xl:w-9/12 xl:max-w-full swiper">
+        <div class="swiper-wrapper">
+          <!-- casino -->
+          <div class="casino swiper-slide max-w m-auto bg-zinc-950 rounded-lg mb-4 sm:mb-0">
+            <div class="casino-image h-[235px] overflow-hidden rounded-t-lg">
+              <a href="#">
+                <img class="rounded-t-lg h-full w-full transition duration-500 ease-in-out hover:scale-110"
+                  src="https://press.fanduel.com/files/images/FanDuel_Press_Release_Thumbnail.png" alt="" />
+              </a>
+            </div>
+            <div class="casino-info px-4 py-6">
+              <!-- rating -->
+              <div class="rating flex items-center justify-end">
+                <svg class="w-5 h-5 text-yellow-300 me-1" aria-hidden="true" xmlns="http://www.w3.org/2000/svg"
+                  fill="currentColor" viewBox="0 0 22 20">
+                  <path
+                    d="M20.924 7.625a1.523 1.523 0 0 0-1.238-1.044l-5.051-.734-2.259-4.577a1.534 1.534 0 0 0-2.752 0L7.365 5.847l-5.051.734A1.535 1.535 0 0 0 1.463 9.2l3.656 3.563-.863 5.031a1.532 1.532 0 0 0 2.226 1.616L11 17.033l4.518 2.375a1.534 1.534 0 0 0 2.226-1.617l-.863-5.03L20.537 9.2a1.523 1.523 0 0 0 .387-1.575Z" />
+                </svg>
+                <p class="text-sm font-bold text-zinc-200">4.95</p>
+              </div>
+
+              <!-- name -->
+              <a href="#">
+                <h5 class="mb-3 text-[48px] font-bold text-zinc-50 text-center overflow-hidden">
+                  <span class="inline-block relative">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="100%" height="auto" style="
+                      position: absolute;
+                      top: 85%;
+                      left: 0%;
+                      height: auto;
+                      width: 100%;
+                    " viewBox="0 0 250.846 10.274">
+                      <path id="Path_57522" data-name="Path 57522" d="M404.495,510.04S497.4,497,652.059,506.387"
+                        transform="translate(-402.801 -501.46)" fill="none" stroke="#ff9f0f" stroke-linecap="round"
+                        stroke-width="3"></path>
+                    </svg>
+                    FanDuel
+                  </span>
+                </h5>
+              </a>
+
+              <!-- desc -->
+              <ul class="text-zinc-300 mt-4 font-normal tracking-tight">
+                <li>
+                  <img width="20" height="20" class="inline"
+                    src="https://cdn3.iconfinder.com/data/icons/casino/256/Grapes-512.png" alt="" />
+                  High withdrawal limits
+                </li>
+                <li>
+                  <img width="20" height="20" class="inline"
+                    src="https://cdn1.iconfinder.com/data/icons/casino-smooth-vol-2/256/WATERMELON-512.png" alt="" />
+                  %100 Welcome Bonus
+                </li>
+                <li>
+                  <img width="20" height="20" class="inline"
+                    src="https://cdn3.iconfinder.com/data/icons/casino/256/Strawberry-512.png" alt="" />
+                  Multilingual customer service agents
+                </li>
+              </ul>
+
+              <div class="footer mt-6 flex gap-x-4 justify-center">
+                <button type="button"
+                  class="text-white bg-zinc-700 hover:bg-yellow-950 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center inline-flex items-center">
+                  Read Review
+                </button>
+                <button type="button"
+                  class="text-white bg-amber-500 hover:bg-yellow-600 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center inline-flex items-center">
+                  Go Casino
+                  <svg class="rtl:rotate-180 w-3.5 h-3.5 ms-2" aria-hidden="true" xmlns="http://www.w3.org/2000/svg"
+                    fill="none" viewBox="0 0 14 10">
+                    <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                      d="M1 5h12m0 0L9 1m4 4L9 9" />
+                  </svg>
+                </button>
+              </div>
+            </div>
+          </div>
+
+          <!-- casino -->
+          <div class="casino swiper-slide max-w m-auto bg-zinc-950 rounded-lg mb-4 sm:mb-0 sm:scale-[1.08]">
+            <div class="casino-image h-[235px] overflow-hidden rounded-t-lg">
+              <a href="#">
+                <img class="rounded-t-lg h-full w-full transition duration-500 ease-in-out hover:scale-110"
+                  src="https://img.freepik.com/free-psd/3d-rendering-casino-elements_23-2149586686.jpg" alt="" />
+              </a>
+            </div>
+            <div class="casino-info px-4 py-6">
+              <!-- rating -->
+              <div class="rating flex items-center justify-end">
+                <svg class="w-5 h-5 text-yellow-300 me-1" aria-hidden="true" xmlns="http://www.w3.org/2000/svg"
+                  fill="currentColor" viewBox="0 0 22 20">
+                  <path
+                    d="M20.924 7.625a1.523 1.523 0 0 0-1.238-1.044l-5.051-.734-2.259-4.577a1.534 1.534 0 0 0-2.752 0L7.365 5.847l-5.051.734A1.535 1.535 0 0 0 1.463 9.2l3.656 3.563-.863 5.031a1.532 1.532 0 0 0 2.226 1.616L11 17.033l4.518 2.375a1.534 1.534 0 0 0 2.226-1.617l-.863-5.03L20.537 9.2a1.523 1.523 0 0 0 .387-1.575Z" />
+                </svg>
+                <p class="text-sm font-bold text-zinc-200">4.95</p>
+              </div>
+
+              <!-- name -->
+              <a href="#">
+                <h5 class="mb-3 text-[48px] font-bold text-zinc-50 text-center overflow-hidden">
+                  <span class="inline-block relative">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="100%" height="auto" style="
+                      position: absolute;
+                      top: 85%;
+                      left: 0%;
+                      height: auto;
+                      width: 100%;
+                    " viewBox="0 0 250.846 10.274">
+                      <path id="Path_57522" data-name="Path 57522" d="M404.495,510.04S497.4,497,652.059,506.387"
+                        transform="translate(-402.801 -501.46)" fill="none" stroke="#ff9f0f" stroke-linecap="round"
+                        stroke-width="3"></path>
+                    </svg>
+                    OpenCasino
+                  </span>
+                </h5>
+              </a>
+              <!-- desc -->
+              <ul class="text-zinc-300 mt-4 font-normal tracking-tight">
+                <li>
+                  <img width="20" height="20" class="inline"
+                    src="https://cdn3.iconfinder.com/data/icons/casino/256/Grapes-512.png" alt="" />
+                  High withdrawal limits
+                </li>
+                <li>
+                  <img width="20" height="20" class="inline"
+                    src="https://cdn1.iconfinder.com/data/icons/casino-smooth-vol-2/256/WATERMELON-512.png" alt="" />
+                  %100 Welcome Bonus
+                </li>
+                <li>
+                  <img width="20" height="20" class="inline"
+                    src="https://cdn3.iconfinder.com/data/icons/casino/256/Strawberry-512.png" alt="" />
+                  Multilingual customer service agents
+                </li>
+              </ul>
+
+              <div class="footer mt-6 flex gap-x-4 justify-center">
+                <button type="button"
+                  class="text-white bg-zinc-700 hover:bg-yellow-950 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center inline-flex items-center">
+                  Read Review
+                </button>
+                <button type="button"
+                  class="text-white bg-amber-500 hover:bg-yellow-600 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center inline-flex items-center">
+                  Go Casino
+                  <svg class="rtl:rotate-180 w-3.5 h-3.5 ms-2" aria-hidden="true" xmlns="http://www.w3.org/2000/svg"
+                    fill="none" viewBox="0 0 14 10">
+                    <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                      d="M1 5h12m0 0L9 1m4 4L9 9" />
+                  </svg>
+                </button>
+              </div>
+            </div>
+          </div>
+
+          <!-- casino -->
+          <div class="casino swiper-slide max-w m-auto bg-zinc-950 rounded-lg">
+            <div class="casino-image h-[235px] overflow-hidden rounded-t-lg">
+              <a href="#">
+                <img class="rounded-t-lg h-full w-full transition duration-500 ease-in-out hover:scale-110"
+                  src="https://cimg.co/news/95503/238157/bc-game.jpg" alt="" />
+              </a>
+            </div>
+            <div class="casino-info px-4 py-6">
+              <!-- rating -->
+              <div class="rating flex items-center justify-end">
+                <svg class="w-5 h-5 text-yellow-300 me-1" aria-hidden="true" xmlns="http://www.w3.org/2000/svg"
+                  fill="currentColor" viewBox="0 0 22 20">
+                  <path
+                    d="M20.924 7.625a1.523 1.523 0 0 0-1.238-1.044l-5.051-.734-2.259-4.577a1.534 1.534 0 0 0-2.752 0L7.365 5.847l-5.051.734A1.535 1.535 0 0 0 1.463 9.2l3.656 3.563-.863 5.031a1.532 1.532 0 0 0 2.226 1.616L11 17.033l4.518 2.375a1.534 1.534 0 0 0 2.226-1.617l-.863-5.03L20.537 9.2a1.523 1.523 0 0 0 .387-1.575Z" />
+                </svg>
+                <p class="text-sm font-bold text-zinc-200">4.95</p>
+              </div>
+
+              <!-- name -->
+              <a href="#">
+                <h5 class="mb-3 text-[48px] font-bold text-zinc-50 text-center overflow-hidden">
+                  <span class="inline-block relative">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="100%" height="auto" style="
+                      position: absolute;
+                      top: 85%;
+                      left: 0%;
+                      height: auto;
+                      width: 100%;
+                    " viewBox="0 0 250.846 10.274">
+                      <path id="Path_57522" data-name="Path 57522" d="M404.495,510.04S497.4,497,652.059,506.387"
+                        transform="translate(-402.801 -501.46)" fill="none" stroke="#ff9f0f" stroke-linecap="round"
+                        stroke-width="3"></path>
+                    </svg>
+                    BC.GAME
+                  </span>
+                </h5>
+              </a>
+              <!-- desc -->
+              <ul class="text-zinc-300 mt-4 font-normal tracking-tight">
+                <li>
+                  <img width="20" height="20" class="inline"
+                    src="https://cdn3.iconfinder.com/data/icons/casino/256/Grapes-512.png" alt="" />
+                  High withdrawal limits
+                </li>
+                <li>
+                  <img width="20" height="20" class="inline"
+                    src="https://cdn1.iconfinder.com/data/icons/casino-smooth-vol-2/256/WATERMELON-512.png" alt="" />
+                  %100 Welcome Bonus
+                </li>
+                <li>
+                  <img width="20" height="20" class="inline"
+                    src="https://cdn3.iconfinder.com/data/icons/casino/256/Strawberry-512.png" alt="" />
+                  Multilingual customer service agents
+                </li>
+              </ul>
+
+              <div class="footer mt-6 flex gap-x-4 justify-center">
+                <button type="button"
+                  class="text-white bg-zinc-700 hover:bg-yellow-950 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center inline-flex items-center">
+                  Read Review
+                </button>
+                <button type="button"
+                  class="text-white bg-amber-500 hover:bg-yellow-600 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center inline-flex items-center">
+                  Go Casino
+                  <svg class="rtl:rotate-180 w-3.5 h-3.5 ms-2" aria-hidden="true" xmlns="http://www.w3.org/2000/svg"
+                    fill="none" viewBox="0 0 14 10">
+                    <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                      d="M1 5h12m0 0L9 1m4 4L9 9" />
+                  </svg>
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- intro -->
+    <section class="intro relative py-16">
+      <!-- <div class="absolute top-0 right-0 left-0 bottom-0">
+        <img src="https://triple-seven.axiomthemes.com/wp-content/uploads/2023/11/casino-blur-3-2.png" alt="">
+      </div> -->
+      <!-- title -->
+      <div class="detail sm:w-8/12 m-auto text-center pt-16 relative z-10">
+        <h6 class="text-white sm:leading-[120px] text-[48px] font-semibold tracking-tight sm:text-[108px]">
+          You can enjoy your gambling with us
+        </h6>
+        <h6 class="text-[24px] mt-6 font-light text-zinc-200 sm:text-[36px]">
+          We guarantee solving any issues at casinos that our referred by us.
+        </h6>
+      </div>
+
+      <div class="parallax-elems">
+        <div class="absolute w-[100px] lg:w-[200px] right-0 top-4 sm:right-24 slot-icon-1 z-1" id="slot-icon-1">
+          <div data-depth="0.8">
+            <img src="https://inseinc.com/wp-content/uploads/2022/07/Star.png" alt="" />
+          </div>
+        </div>
+        <div class="absolute w-[100px] lg:w-[200px] left-0 top-4 sm:left-12 sm:top-16 slot-icon-2 z-1" id="slot-icon-2">
+          <div data-depth="2">
+            <img src="https://www.pushgaming.com/uploads/NewGamePages2020/RazorShark/Razor-Reveal-min.png" alt="" />
+          </div>
+        </div>
+      </div>
+
+      <div class="services w-6/12 m-auto justify-center gap-x-8 mt-16 sm:flex">
+        <!-- service -->
+        <div class="service basis-1/3 text-center mb-8 sm:mb-0">
+          <div class="img flex justify-center mb-4">
+            <svg width="64px" height="64px" viewBox="0 0 36 36" version="1.1" xmlns="http://www.w3.org/2000/svg"
+              xmlns:xlink="http://www.w3.org/1999/xlink">
+              <g id="icons" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+                <g id="ui-gambling-website-lined-icnos-casinoshunter" class="fill-amber-500"
+                  transform="translate(-212.000000, -412.000000)" fill-rule="nonzero">
+                  <g id="square-filled" transform="translate(50.000000, 120.000000)">
+                    <path
+                      d="M180,292 C189.941125,292 198,300.058875 198,310 C198,319.941125 189.941125,328 180,328 C170.058875,328 162,319.941125 162,310 C162,300.058875 170.058875,292 180,292 Z M173.415488,317.526416 L173.363961,317.585786 L173.363961,317.585786 L169.170997,321.778603 C171.791406,324.189005 175.218288,325.736217 179.000703,325.969301 L178.999899,319.950615 C176.87132,319.739255 174.939097,318.860436 173.415488,317.526416 Z M181.0011,319.950516 L181.000299,325.96924 C184.925065,325.727139 188.466977,324.07013 191.122218,321.502031 C191.060882,321.463298 191.003054,321.417268 190.949747,321.363961 L186.861169,317.274949 C185.298261,318.7495 183.260303,319.725957 181.0011,319.950516 Z M170.049187,310.998103 L170,311 L170,311 L164.03076,311.000299 C164.249702,314.549627 165.625803,317.785845 167.786439,320.336328 L171.949747,316.171573 C171.9845,316.13682 172.021174,316.10516 172.059428,316.076593 C170.957537,314.641712 170.237466,312.898096 170.049187,310.998103 Z M188.174816,315.760984 L192.363961,319.949747 C192.395474,319.98126 192.424444,320.014353 192.450871,320.048771 C194.475084,317.544377 195.758451,314.417451 195.96924,311.000299 L190,311 L189.950813,310.998103 C189.776178,312.76041 189.144033,314.388183 188.174816,315.760984 Z M180,302 C175.581722,302 172,305.581722 172,310 C172,314.418278 175.581722,318 180,318 C184.418278,318 188,314.418278 188,310 C188,305.581722 184.418278,302 180,302 Z M179.977787,305 C180.368592,305 180.686761,305.318008 180.68674,305.708732 L180.68674,305.708732 L180.68674,306.058048 C181.04503,306.080362 181.377022,306.13169 181.67501,306.21006 C182.109054,306.32501 182.371066,306.77165 182.259356,307.206036 L182.259356,307.206036 L182.248431,307.249054 C182.196398,307.451368 182.062213,307.625392 181.880443,307.727485 C181.699356,307.828612 181.478491,307.852052 181.280684,307.791066 C180.940362,307.687022 180.596197,307.636278 180.228853,307.636278 C179.645151,307.636278 179.324064,307.829879 179.324064,308.181791 C179.324064,308.482978 179.665674,308.713159 180.67837,309.094266 C182.132213,309.607022 182.753501,310.310181 182.753501,311.443602 C182.753501,312.595292 181.922233,313.494004 180.626378,313.75664 L180.626378,313.75664 L180.626378,314.287666 C180.626378,314.678712 180.308551,314.9966 179.917485,314.9966 C179.527022,314.9966 179.208853,314.678712 179.208853,314.287988 L179.208853,314.287988 L179.208853,313.854507 C178.759316,313.824708 178.295412,313.738632 177.890221,313.608893 C177.468028,313.47338 177.2233,313.03161 177.333481,312.602676 L177.333481,312.602676 L177.357223,312.508913 C177.409215,312.30664 177.54507,312.133883 177.730302,312.035654 C177.91332,311.938692 178.136117,311.922656 178.331368,311.992656 C178.769899,312.149296 179.211066,312.228913 179.64328,312.228913 C180.284427,312.228913 180.667183,311.998089 180.667183,311.611167 C180.667183,311.234889 180.335473,310.976117 179.484004,310.68839 C178.444044,310.338451 177.25,309.760221 177.25,308.38503 C177.25,307.284406 178.020543,306.43833 179.268893,306.158431 L179.268893,306.158431 L179.268893,305.708732 C179.268893,305.318008 179.586761,305 179.977787,305 Z M164.030699,309.000703 L170,309 L170.049088,309.002896 C170.237213,307.102515 170.957344,305.35854 172.058469,303.921978 C172.021174,303.89484 171.9845,303.86318 171.949747,303.828427 L171.949747,303.828427 L167.786439,299.663672 C165.625599,302.214396 164.249443,305.450982 164.030699,309.000703 Z M192.031716,299.452745 L187.775358,303.711083 C188.970115,305.186398 189.753482,307.008517 189.950912,309.002896 L190,309 L190,309 L195.969301,309.000703 C195.744482,305.352396 194.297069,302.034859 192.031716,299.452745 Z M169.170997,298.221397 L173.363961,302.414214 C173.382816,302.433069 173.400761,302.452489 173.417795,302.472421 C174.939812,301.138938 176.873133,300.259921 179.002896,300.049088 C179.000424,300.033909 179,300.017004 179,300 L179.000703,294.030699 C175.218288,294.263783 171.791406,295.810995 169.170997,298.221397 Z M181.000299,294.03076 L181,300 L180.998103,300.049187 C183.02777,300.250316 184.878987,301.058303 186.367764,302.28916 L190.623025,298.035181 C188.030426,295.731653 184.683996,294.257991 181.000299,294.03076 Z"
+                      id="chip"></path>
+                  </g>
+                </g>
+              </g>
+            </svg>
+          </div>
+          <div class="info">
+            <div class="title mb-2">
+              <h6 class="text-zinc-50 font-semibold text-xl">
+                Guarantee Payment
+              </h6>
+            </div>
+            <div class="sub-title">
+              <p class="text-zinc-200 font-light">
+                We rate the casino by testing more practically & see how it run
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <!-- service -->
+        <div class="service basis-1/3 text-center mb-8 sm:mb-0">
+          <div class="img flex justify-center mb-4">
+            <svg class="fill-amber-500" width="64px" height="64px" viewBox="0 0 64 64"
+              xmlns="http://www.w3.org/2000/svg">
+              <g data-name="19 costumer service" id="_19_costumer_service">
+                <path
+                  d="M37.71,34.54a13.428,13.428,0,0,0,5.51-4.86H46.7a2.915,2.915,0,0,0,2.74-3.06V19.43a3.124,3.124,0,0,0-.2-1.11V18.3a25.246,25.246,0,0,0-5.2-9.54l-.13-.15a15.275,15.275,0,0,0-5.72-3.97,17.135,17.135,0,0,0-14.11.8,15.539,15.539,0,0,0-3.99,3.17l-.13.15a25.246,25.246,0,0,0-5.2,9.54v.02a3.124,3.124,0,0,0-.2,1.11v7.19a2.915,2.915,0,0,0,2.74,3.06h3.48a13.428,13.428,0,0,0,5.51,4.86,20.226,20.226,0,0,0-15.02,19.5V59.5a1,1,0,0,0,1,1H51.73a1,1,0,0,0,1-1V54.04A20.226,20.226,0,0,0,37.71,34.54Zm9.73-15.11v7.19c0,.56-.35,1.06-.74,1.06H44.29c.17-.42.33-.85.46-1.29,0-.01,0-.01.01-.02a13.235,13.235,0,0,0-.1-8H46.7C47.09,18.37,47.44,18.87,47.44,19.43ZM17.3,27.68c-.39,0-.74-.5-.74-1.06V19.43c0-.56.35-1.06.74-1.06h2.04a13.261,13.261,0,0,0,.37,9.31Zm.26-11.31a22.694,22.694,0,0,1,3.89-6.28l.12-.13A13.124,13.124,0,0,1,25.05,7.2a15.268,15.268,0,0,1,12.41-.7,13.159,13.159,0,0,1,4.97,3.46l.12.13a22.694,22.694,0,0,1,3.89,6.28H43.82a13.311,13.311,0,0,0-23.64,0Zm3.11,6.14A11.33,11.33,0,1,1,43.05,25H39.71a2.991,2.991,0,0,0-2.82-2h-3a3,3,0,0,0,0,6h3a2.991,2.991,0,0,0,2.82-2H42.4a11.329,11.329,0,0,1-21.73-4.49Zm17.22,3.48v.02a.994.994,0,0,1-1,.99h-3a1,1,0,0,1,0-2h3A.994.994,0,0,1,37.89,25.99ZM50.73,58.5H13.27V54.04a18.228,18.228,0,0,1,18.2-18.2h1.06a18.228,18.228,0,0,1,18.2,18.2Z" />
+              </g>
+            </svg>
+          </div>
+          <div class="info">
+            <div class="title mb-2">
+              <h6 class="text-zinc-50 font-semibold text-xl">24/7 Support</h6>
+            </div>
+            <div class="sub-title">
+              <p class="text-zinc-200 font-light">
+                We rate the casino by testing more practically & see how it run
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <!-- service -->
+        <div class="service basis-1/3 text-center mb-8 sm:mb-0">
+          <div class="img flex justify-center mb-4">
+            <svg width="64px" height="64px" viewBox="0 0 40 26" version="1.1" class="fill-amber-500"
+              xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+              <!-- Generator: Sketch 59.1 (86144) - https://sketch.com -->
+              <title>withdrawal</title>
+              <desc>Created with Sketch.</desc>
+              <g id="icons" stroke="none" stroke-width="1" fill-rule="evenodd">
+                <g id="ui-gambling-website-lined-icnos-casinoshunter" transform="translate(-860.000000, -547.000000)"
+                  fill-rule="nonzero">
+                  <g id="square-filled" transform="translate(50.000000, 120.000000)">
+                    <path
+                      d="M839.440202,427 C840.918327,427 842.116584,428.2042 842.116584,429.689655 L842.116,430.538 L848.215774,430.539036 C849.151893,430.539036 849.91965,431.263563 849.994085,432.185078 L850,432.33214 L850,436.191856 C850,437.182159 849.201162,437.984959 848.215745,437.984959 L848.215745,437.984959 L842.116,437.984 L842.118297,442.217325 C844.355457,446.366261 842.377052,452.694044 836.182253,452.989315 L835.900763,452.9985 C828.961649,453.136281 826.067302,443.743322 831.748655,439.965974 C832.339522,439.603285 832.054367,439.761985 832.441164,439.557934 C832.818537,439.358856 832.358338,439.592982 833.219834,439.169233 C833.511128,439.052843 833.811732,438.954787 834.120208,438.876549 L829.334735,435.767848 C829.122648,435.630063 828.942082,435.448602 828.804977,435.235463 C828.27,434.403805 828.507181,433.293778 829.334735,432.756148 L829.334735,432.756148 L835.434,428.793 L812.676382,428.793103 C812.183674,428.793103 811.784255,429.194503 811.784255,429.689655 L811.784255,445.827586 C811.784255,446.322738 812.183674,446.724138 812.676382,446.724138 L828.789938,446.724514 C828.867707,447.350994 829.025872,447.952379 829.253732,448.517913 L812.676382,448.517241 C811.198257,448.517241 810,447.313042 810,445.827586 L810,429.689655 C810,428.2042 811.198257,427 812.676382,427 L839.440202,427 Z M833.66583,449.011445 L832.432601,450.237808 C833.193196,450.830391 834.110248,451.232688 835.110898,451.372876 L835.110898,451.372876 L835.110898,449.63261 C834.582461,449.524353 834.093244,449.30894 833.66583,449.011445 L833.66583,449.011445 Z M838.135221,449.011497 C837.707808,449.30894 837.218591,449.524353 836.690206,449.63261 L836.690206,449.63261 L836.690206,451.372876 C837.690804,451.232688 838.607908,450.830391 839.368451,450.237808 L839.368451,450.237808 Z M841.49678,446.46402 L839.754592,446.46402 C839.66973,446.973002 839.485372,447.448744 839.22168,447.87088 L839.22168,447.87088 L840.464123,449.106352 C841.018039,448.346255 841.384754,447.44309 841.49678,446.46402 L841.49678,446.46402 Z M832.046512,446.46402 L830.304324,446.46402 C830.41635,447.44309 830.783066,448.346255 831.336982,449.1063 L831.336982,449.1063 L832.579424,447.870828 C832.315679,447.448691 832.131321,446.97295 832.046512,446.46402 L832.046512,446.46402 Z M835.900657,443.511838 C832.841379,443.565914 832.840905,448.087393 835.900552,448.14194 C838.959726,448.087812 838.960199,443.566385 835.900657,443.511838 Z M831.4648,442.378392 C830.898566,443.09703 830.505107,443.95617 830.346281,444.893571 L830.346281,444.893571 L832.10779,444.893571 C832.224553,444.424687 832.427179,443.989464 832.69803,443.604704 L832.69803,443.604704 Z M840.336304,442.378392 L839.103074,443.604704 C839.373926,443.989464 839.576604,444.424687 839.693315,444.893571 L839.693315,444.893571 L841.45477,444.893571 C841.295997,443.95617 840.902539,443.09703 840.336304,442.378392 L840.336304,442.378392 Z M819.481441,442.241379 C819.938504,442.241379 820.309027,442.611902 820.309027,443.068966 C820.309027,443.526029 819.938504,443.896552 819.481441,443.896552 L814.396096,443.896552 C813.939032,443.896552 813.568509,443.526029 813.568509,443.068966 C813.568509,442.611902 813.939032,442.241379 814.396096,442.241379 L819.481441,442.241379 Z M827.114086,442.241379 C827.571149,442.241379 827.941672,442.611902 827.941672,443.068966 C827.941672,443.526029 827.571149,443.896552 827.114086,443.896552 L822.02874,443.896552 C821.571677,443.896552 821.201154,443.526029 821.201154,443.068966 C821.201154,442.611902 821.571677,442.241379 822.02874,442.241379 L827.114086,442.241379 Z M835.110898,440.280901 C834.183686,440.41083 833.328279,440.766013 832.60264,441.288867 L832.60264,441.288867 L833.845082,442.52434 C834.228222,442.287673 834.655004,442.114557 835.110898,442.021168 L835.110898,442.021168 Z M836.690206,440.280953 L836.690206,442.02122 C837.1461,442.114609 837.572882,442.287725 837.956022,442.524392 L837.956022,442.524392 L839.198465,441.288972 C838.472825,440.766013 837.617419,440.410882 836.690206,440.280953 L836.690206,440.280953 Z M840.332,437.984 L838.253617,437.984585 L838.253416,438.268298 C838.253416,438.513964 838.203014,438.756223 838.106526,438.980139 C838.959136,439.229905 839.701853,439.616403 840.332941,440.102922 L840.332,437.984 Z M836.469162,430.256336 L830.303396,434.261998 L836.469162,438.26766 L836.470631,436.191415 L848.215762,436.191856 L848.215762,432.33214 L836.470632,432.331765 L836.469162,430.256336 Z M818.029146,430.586207 C819.014563,430.586207 819.813401,431.389007 819.813401,432.37931 C819.813401,433.369614 819.014563,434.172414 818.029146,434.172414 C817.495948,434.172414 817.017376,433.937372 816.690423,433.564763 C816.364534,433.937372 815.885962,434.172414 815.352764,434.172414 C814.367347,434.172414 813.568509,433.369614 813.568509,432.37931 C813.568509,431.389007 814.367347,430.586207 815.352764,430.586207 C815.885962,430.586207 816.364534,430.821249 816.691487,431.193857 C817.017376,430.821249 817.495948,430.586207 818.029146,430.586207 Z M839.440202,428.793103 L837.500248,428.792768 C837.955996,429.117625 838.253416,429.652075 838.253416,430.256336 L838.253416,430.256336 L838.253617,430.538718 L840.332,430.538 L840.332329,429.689655 C840.332329,429.194503 839.93291,428.793103 839.440202,428.793103 Z"
+                      id="withdrawal"></path>
+                  </g>
+                </g>
+              </g>
+            </svg>
+          </div>
+          <div class="info">
+            <div class="title mb-2">
+              <h6 class="text-zinc-50 font-semibold text-xl">
+                Fast Withdrawal
+              </h6>
+            </div>
+            <div class="sub-title">
+              <p class="text-zinc-200 font-light">
+                We rate the casino by testing more practically & see how it run
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- <div class="bg-overlay absolute top-0 left-0 right-0 bottom-0 h-full"> -->
+      <!-- </div> -->
+    </section>
+
+    <section class="hurry-up sm:h-[500px] mr-3 ml-3 lg:px-16 my-0 sm:my-32 rounded-xl">
+      <div
+        class="text-white w-full h-full text-center grid rounded-xl bg-center bg-cover bg-[url('/static/casinoaffiliate_app/imgs/hurryup-banner.jpg')]">
+        <div class="col-start-1 row-start-1 bg-amber-900 py-4 bg-opacity-60 w-full h-full rounded-xl"></div>
+        <div class="col-start-1 row-start-1 mx-auto my-auto py-4">
+          <p class="text-zinc-100 text-[16px] sm:text-[24px] font-semibold">HURRY UP!</p>
+          <p class="text-white text-[12px] sm:text-[64px] font-bold">%100 Deposit Bonus</p>
+
+          <div class="grid grid-flow-col justify-center text-center auto-cols-max mt-8 gap-x-4 sm:gap-x-8">
+            <div class="flex flex-col p-2 rounded-box text-zinc-100 font-semibold">
+              <span class="countdown font-bold text-zinc-100 text-xl sm:text-5xl">
+                <span style="--value:01;" class="mb-2 sm:mb-4"></span>
+              </span>
+              Days
+            </div>
+            <div class="flex flex-col p-2 rounded-box text-zinc-100 font-semibold">
+              <span class="countdown font-bold text-zinc-100 text-xl sm:text-5xl">
+                <span style="--value:12;" class="mb-2 sm:mb-4"></span>
+              </span>
+              Hours
+            </div>
+            <div class="flex flex-col p-2 rounded-box text-zinc-100 font-semibold">
+              <span class="countdown font-bold text-zinc-100 text-xl sm:text-5xl">
+                <span style="--value:36;" class="mb-2 sm:mb-4"></span>
+              </span>
+              Minutes
+            </div>
+            <div class="flex flex-col p-2 rounded-box text-zinc-100 font-semibold">
+              <span class="countdown sec font-bold text-zinc-100 text-xl sm:text-5xl">
+                <span style="--value:58;" class="mb-2 sm:mb-4"></span>
+              </span>
+              Seconds
+            </div>
+          </div>
+
+          <button type="button"
+            class="text-white mt-8 bg-amber-500 hover:bg-amber-700 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-base sm:text-lg px-5 py-2.5 text-center inline-flex items-center">
+            Go Casino
+            <svg class="rtl:rotate-180 w-3.5 h-3.5 ms-2" aria-hidden="true" xmlns="http://www.w3.org/2000/svg"
+              fill="none" viewBox="0 0 14 10">
+              <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                d="M1 5h12m0 0L9 1m4 4L9 9" />
+            </svg>
+          </button>
+
+        </div>
+      </div>
+    </section>
+
+    <section class="hidden sm:block how-it-works py-8 bg-black bg-neutral-900">
+      <div class="w-9/12 flex m-auto items-center justify-center gap-x-8">
+        <div class="text-zinc-100 text-xl font-semibold">How It Works?</div>
+        <div class="mx-12">
+          <ol
+            class="flex items-center w-full bg-neutral-800 text-sm font-medium px-12 py-4 gap-x-16 text-center text-zinc-100 rounded-lg shadow-sm">
+            <li class="flex items-center">
+              <p>
+                <span class="font-semibold text-xl">Sign Up</span>
+                <span class="block text-zinc-400 font-light text-base">referred casinos</span>
+              </p>
+            </li>
+
+            <li class="flex items-center">
+              <p>
+                <span class="font-semibold text-xl">Play</span>
+                <span class="block text-zinc-400 font-light text-base">go for it</span>
+              </p>
+            </li>
+            <li class="flex items-center">
+              <p>
+                <span class="font-semibold text-xl">Cash Out</span>
+                <span class="block text-zinc-400 font-light text-base">your winnings</span>
+              </p>
+            </li>
+          </ol>
+        </div>
+        <div class="text-zinc-300 text-base font-base text-center">Payouts in:
+          <span class="text-zinc-100 block text-lg font-semibold">5 Min.</span>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- best casinos -->
+    <section class="best-casinos mt-12">
+      <div class="m-auto">
+        <div class="title mb-2 sm:mb-8">
+          <h6 class="text-[32px] text-white text-center font-semibold">
+            Top Casinos
+            </h3>
+        </div>
+
+        <div class="best-casinos-list flex flex-col gap-y-4">
+          <!-- casino -->
+          <div class="casino hidden lg:flex items-center rounded-lg h-[200px] bg-neutral-900 gap-x-8 pr-4">
+            <!-- img -->
+            <div class="relative img basis-2/12 mr-4 h-full normal zap-border  flex items-center">
+              <div class="px-4">
+                <img class="object-cover rounded-2xl w-full h-full"
+                  src="https://objects.kaxmedia.com/auto/o/159728/2573c626ae.png" alt="">
+              </div>
+            </div>
+
+            <div class="flex basis-2/12 flex-col justify-between leading-normal">
+              <h6 class="mb-2 text-[36px] font-bold tracking-tight text-zinc-100">
+                <span class="inline-block relative">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="100%" height="auto" style="
+                    position: absolute;
+                    top: 85%;
+                    left: 0%;
+                    height: auto;
+                    width: 100%;
+                  " viewBox="0 0 250.846 10.274">
+                    <path id="Path_57522" data-name="Path 57522" d="M404.495,510.04S497.4,497,652.059,506.387"
+                      transform="translate(-402.801 -501.46)" fill="none" stroke="#ff9f0f" stroke-linecap="round"
+                      stroke-width="3"></path>
+                  </svg>
+                  CasiBee
+                </span>
+              </h6>
+            </div>
+
+            <div class="casino-detail basis-2/12 ml-8 h-full text-center leading-none">
+              <div class="sub-title">Offers</div>
+              <!-- <span class="text-base text-zinc-300 block font-light">Get up to</span>
+              <span class="text-[36px] font-bold text-zinc-50">50 Free Spins</span>
+              <span class="text-base text-zinc-300 block font-light">1 for every $1 deposit</span> -->
+            </div>
+
+            <div class="flex flex-col basis-3/12 items-center">
+              <div class="flex">
+                <svg class="w-6 h-6 text-yellow-300 me-1" aria-hidden="true" xmlns="http://www.w3.org/2000/svg"
+                  fill="currentColor" viewBox="0 0 22 20">
+                  <path
+                    d="M20.924 7.625a1.523 1.523 0 0 0-1.238-1.044l-5.051-.734-2.259-4.577a1.534 1.534 0 0 0-2.752 0L7.365 5.847l-5.051.734A1.535 1.535 0 0 0 1.463 9.2l3.656 3.563-.863 5.031a1.532 1.532 0 0 0 2.226 1.616L11 17.033l4.518 2.375a1.534 1.534 0 0 0 2.226-1.617l-.863-5.03L20.537 9.2a1.523 1.523 0 0 0 .387-1.575Z" />
+                </svg>
+                <svg class="w-6 h-6 text-yellow-300 me-1" aria-hidden="true" xmlns="http://www.w3.org/2000/svg"
+                  fill="currentColor" viewBox="0 0 22 20">
+                  <path
+                    d="M20.924 7.625a1.523 1.523 0 0 0-1.238-1.044l-5.051-.734-2.259-4.577a1.534 1.534 0 0 0-2.752 0L7.365 5.847l-5.051.734A1.535 1.535 0 0 0 1.463 9.2l3.656 3.563-.863 5.031a1.532 1.532 0 0 0 2.226 1.616L11 17.033l4.518 2.375a1.534 1.534 0 0 0 2.226-1.617l-.863-5.03L20.537 9.2a1.523 1.523 0 0 0 .387-1.575Z" />
+                </svg>
+                <svg class="w-6 h-6 text-yellow-300 me-1" aria-hidden="true" xmlns="http://www.w3.org/2000/svg"
+                  fill="currentColor" viewBox="0 0 22 20">
+                  <path
+                    d="M20.924 7.625a1.523 1.523 0 0 0-1.238-1.044l-5.051-.734-2.259-4.577a1.534 1.534 0 0 0-2.752 0L7.365 5.847l-5.051.734A1.535 1.535 0 0 0 1.463 9.2l3.656 3.563-.863 5.031a1.532 1.532 0 0 0 2.226 1.616L11 17.033l4.518 2.375a1.534 1.534 0 0 0 2.226-1.617l-.863-5.03L20.537 9.2a1.523 1.523 0 0 0 .387-1.575Z" />
+                </svg>
+                <svg class="w-6 h-6 text-yellow-300 me-1" aria-hidden="true" xmlns="http://www.w3.org/2000/svg"
+                  fill="currentColor" viewBox="0 0 22 20">
+                  <path
+                    d="M20.924 7.625a1.523 1.523 0 0 0-1.238-1.044l-5.051-.734-2.259-4.577a1.534 1.534 0 0 0-2.752 0L7.365 5.847l-5.051.734A1.535 1.535 0 0 0 1.463 9.2l3.656 3.563-.863 5.031a1.532 1.532 0 0 0 2.226 1.616L11 17.033l4.518 2.375a1.534 1.534 0 0 0 2.226-1.617l-.863-5.03L20.537 9.2a1.523 1.523 0 0 0 .387-1.575Z" />
+                </svg>
+                <svg class="w-6 h-6 text-gray-300 me-1 dark:text-gray-500" aria-hidden="true"
+                  xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 22 20">
+                  <path
+                    d="M20.924 7.625a1.523 1.523 0 0 0-1.238-1.044l-5.051-.734-2.259-4.577a1.534 1.534 0 0 0-2.752 0L7.365 5.847l-5.051.734A1.535 1.535 0 0 0 1.463 9.2l3.656 3.563-.863 5.031a1.532 1.532 0 0 0 2.226 1.616L11 17.033l4.518 2.375a1.534 1.534 0 0 0 2.226-1.617l-.863-5.03L20.537 9.2a1.523 1.523 0 0 0 .387-1.575Z" />
+                </svg>
+              </div>
+              <div class="flex">
+                <p class="ms-1 text-sm font-medium text-gray-500 dark:text-gray-400">4.95</p>
+                <p class="ms-1 text-sm font-medium text-gray-500 dark:text-gray-400">/</p>
+                <p class="ms-1 text-sm font-medium text-gray-500 dark:text-gray-400">5</p>
+              </div>
+            </div>
+
+            <div class="flex gap-x-4 basis-3/12 justify-end">
+              <button type="button"
+                class="text-white bg-zinc-700 hover:bg-yellow-950 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center inline-flex items-center">
+                Read Review
+              </button>
+              <button type="button"
+                class="text-white bg-amber-500 hover:bg-yellow-600 focus:ring-4 focus:outline-none focus:ring-blue-300 font-semibold rounded-lg text-xl px-5 py-2.5 text-center inline-flex items-center">
+                Go Casino
+                <svg class="rtl:rotate-180 w-3.5 h-3.5 ms-2" aria-hidden="true" xmlns="http://www.w3.org/2000/svg"
+                  fill="none" viewBox="0 0 14 10">
+                  <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                    d="M1 5h12m0 0L9 1m4 4L9 9" />
+                </svg>
+              </button>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <section class="subscribe mt-32">
+      <div class="h-[250px] sm:h-[450px] flex gap-x-8">
+        <div
+          class="w-2/12 flex hidden sm:flex justify-start bg-no-repeat opacity-90 bg-right bg-[url('https://www.hacksawgaming.com/images/casino_type_thumbnails/ghost.png')]">
+        </div>
+
+        <div class="p-4 sm:p-0 sm:w-8/12 flex-col sm:flex gap-y-4 justify-center items-center m-auto">
+          <div>
+            <p class="text-white leading-7 font-semibold sm:text-[36px] text-[24px] mb-4 sm:mb-0 basis-1/6">
+              Subscribe for the exclusive updates!
+            </p>
+
+          </div>
+          <div class="basis-5/6 flex gap-x-4">
+            <input type="text" id="large-input" placeholder="Enter Your E-Mail Adress"
+              class="block w-full p-4 text-xs sm:text-base !outline-none placeholder-zinc-950">
+            <button type="button" class="px-5 py-3 text-sm sm:text-base font-semibold text-center inline-flex items-center
+              text-white bg-amber-500 !outline-none hover:bg-amber-600">
+              <svg class="w-3 h-3 sm:w-5 sm:h-3 text-white me-2" aria-hidden="true" xmlns="http://www.w3.org/2000/svg"
+                fill="currentColor" viewBox="0 0 20 16">
+                <path d="m10.036 8.278 9.258-7.79A1.979 1.979 0 0 0 18 0H2A1.987 1.987 0 0 0 .641.541l9.395 7.737Z" />
+                <path
+                  d="M11.241 9.817c-.36.275-.801.425-1.255.427-.428 0-.845-.138-1.187-.395L0 2.6V14a2 2 0 0 0 2 2h16a2 2 0 0 0 2-2V2.5l-8.759 7.317Z" />
+              </svg>
+              SUBSCRIBE
+            </button>
+          </div>
+
+        </div>
+        <div
+          class="w-2/12 hidden sm:flex justify-end bg-no-repeat opacity-90 bg-bottom bg-[url('https://s25652.pcdn.co/wp-content/uploads/2021/09/buffalo-gold-revolution_back.png')]">
+        </div>
+      </div>
+    </section>
+
+  </div>
+</div>
+
+<footer class="bg-black h-[500px] py-24">
+  <div class="flex w-9/12 m-auto">
+    <div class="logo basis-1/12 h-full">
+      <img
+      src="https://triple-seven.axiomthemes.com/wp-content/uploads/2023/11/seven-logo-default-x2.png"
+      alt=""
+    />
+    </div>
+    <div class="basis-11/12 flex gap-x-32">
+      <div class="basis-6/12 text-right">
+        <div class="title">
+          <h6 class="text-white font-semibold text-xl">
+            Links
+          </h6>
+        </div>
+      </div>
+      <div class="basis-6/12 text-left">
+        <div class="title">
+          <h6 class="text-white font-semibold text-xl">
+            Links
+          </h6>
+        </div>
+      </div>
+    </div>
+
+
+
+
+  </div>
+</footer>
+
+<style>
+  .normal.zap-border::after {
+    height: calc(50% + 2px);
+    top: 0;
+  }
+
+  .normal.zap-border::after,
+  .normal.zap-border::before {
+    border-right: 5px solid;
+    content: "";
+    position: absolute;
+    right: -10px;
+    transform: skewX(-10deg);
+    width: 20px;
+    border-color: #262626;
+    z-index: 0;
+    background-color: #262626;
+  }
+
+  .normal.zap-border::before {
+    border-top: 3px solid;
+    bottom: 0;
+    height: 50%;
+    border-color: #262626;
+    background-color: #262626;
+  }
+
+  .normal.zap-border {
+    background-color: #f59e0b;
+    border-color: #262626;
+  }
+</style>
+
+<style>
+  .subscribe {
+    background-image: linear-gradient(90deg, #837c1a 0%, #0F030B 100%);
+  }
+</style>
+
+<script>
+  const swiper = new Swiper('.swiper', {
+    // Optional parameters
+    direction: 'horizontal',
+    loop: true,
+    slidesPerView: 1,
+    autoplay: {
+      delay: 2000,
+    },
+
+    breakpoints: {
+      1280: {
+        slidesPerView: 3,
+        spaceBetween: 40
+      }
+    }
+
+  });
+</script>
+
+<script>
+  var scene = document.getElementById("scene");
+  var parallaxInstance = new Parallax(scene);
+
+  var sloticon1 = document.getElementById("slot-icon-2");
+  var parallaxInstance = new Parallax(sloticon1);
+
+  gsap.registerPlugin(ScrollTrigger);
+  const tl1 = gsap.timeline({
+    scrollTrigger: {
+      trigger: ".intro",
+      scrub: 1,
+      start: "top bottom",
+      markers: false,
+    },
+  });
+  tl1.to(".slot-icon-1", { y: 500, rotation: 45, duration: 5 });
+
+  gsap.registerPlugin(ScrollTrigger);
+  const tl2 = gsap.timeline({
+    scrollTrigger: {
+      trigger: ".intro",
+      scrub: 1,
+      start: "top center",
+      markers: false,
+    },
+  });
+  tl2.to(".slot-icon-2", { y: 600, rotation: -45, duration: 5 });
+
+  // countdown
+  var intervalId = window.setInterval(function () {
+    let val = $(".countdown.sec span").get(0).style.getPropertyValue("--value");
+    $(".countdown.sec span").get(0).style.setProperty("--value", val - 1);
+  }, 1000);
+</script>
+
+{% endblock %}
