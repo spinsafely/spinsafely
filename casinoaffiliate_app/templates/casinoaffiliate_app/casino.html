@@ -139,7 +139,7 @@
                         <div class="sec mb-8 pb-4">
                             <div class="sub-title mb-4 flex justify-between">
                                 <p class="text-white font-semibold text-[28px]">
-                                    <span class="inline-block border-b border-amber-500 pb-1">saglamcasinolar.com
+                                    <span class="inline-block border-b border-amber-500 pb-1">SaglamCasinolar.com
                                         Değerlendirme</span>
                                 </p>
                             </div>
@@ -318,17 +318,25 @@
                                                     text-xs text-zinc-400 border-zinc-800">Pragmatic
                                                     Play</a>
                                                 <a class="text-white border rounded-full py-2 px-3 inline-block hover:text-zinc-200 hover:border-zinc-400
-                                                    text-xs text-zinc-400 border-zinc-800">Pragmatic
-                                                    Play</a>
+                                                    text-xs text-zinc-400 border-zinc-800">Hacksaw</a>
                                                 <a class="text-white border rounded-full py-2 px-3 inline-block hover:text-zinc-200 hover:border-zinc-400
-                                                    text-xs text-zinc-400 border-zinc-800">Pragmatic
-                                                    Play</a>
+                                                    text-xs text-zinc-400 border-zinc-800">Evolution Gaming</a>
                                                 <a class="text-white border rounded-full py-2 px-3 inline-block hover:text-zinc-200 hover:border-zinc-400
-                                                    text-xs text-zinc-400 border-zinc-800">Pragmatic
-                                                    Play</a>
+                                                    text-xs text-zinc-400 border-zinc-800">PlayNGO</a>
                                                 <a class="text-white border rounded-full py-2 px-3 inline-block hover:text-zinc-200 hover:border-zinc-400
-                                                    text-xs text-zinc-400 border-zinc-800">Pragmatic
-                                                    Play</a>
+                                                    text-xs text-zinc-400 border-zinc-800">Wazdan</a>
+                                                <a class="text-white border rounded-full py-2 px-3 inline-block hover:text-zinc-200 hover:border-zinc-400
+                                                    text-xs text-zinc-400 border-zinc-800">Netent</a>
+                                                <a class="text-white border rounded-full py-2 px-3 inline-block hover:text-zinc-200 hover:border-zinc-400
+                                                    text-xs text-zinc-400 border-zinc-800">NoLimit City</a>
+                                                <a class="text-white border rounded-full py-2 px-3 inline-block hover:text-zinc-200 hover:border-zinc-400
+                                                    text-xs text-zinc-400 border-zinc-800">Quickspin</a>
+                                                <a class="text-white border rounded-full py-2 px-3 inline-block hover:text-zinc-200 hover:border-zinc-400
+                                                    text-xs text-zinc-400 border-zinc-800">Relax Gaming</a>
+                                                <a class="text-white border rounded-full py-2 px-3 inline-block hover:text-zinc-200 hover:border-zinc-400
+                                                    text-xs text-zinc-400 border-zinc-800">Thunderkick</a>
+                                                <a class="text-white border rounded-full py-2 px-3 inline-block hover:text-zinc-200 hover:border-zinc-400
+                                                    text-xs text-zinc-400 border-zinc-800">EGT</a>
                                             </div>
                                         </div>
 
@@ -413,6 +421,11 @@
                                                     </svg>
                                                     <span>MasterCard</span>
                                                 </a>
+                                                <a class="text-white border rounded-full py-2 px-3 flex hover:text-zinc-200 hover:border-zinc-400
+                                                    text-xs text-zinc-400 border-zinc-800">
+                                                    <i class="fa-solid fa-building-columns"></i>
+                                                    <span>Banka Havalesi</span>
+                                                </a>
                                             </div>
                                         </div>
 
@@ -428,7 +441,7 @@
                                             </div>
                                             <div class="">
                                                 <p class="text-zinc-200 font-medium">Diller</p>
-                                                <p class="text-zinc-400 text-sm font-light">Turkish,English
+                                                <p class="text-zinc-400 text-sm font-light">Türkçe,İngilizce
                                                     </p>
                                             </div>
                                         </div>
@@ -454,7 +467,7 @@
                             </div>
                         </div>
                     </div>
-
+<!-- 
                     <div class="hidden p-4 rounded-lg" id="styled-reviews" role="tabpanel"
                         aria-labelledby="reviews-tab">
                         <p class="text-sm text-gray-500 dark:text-gray-400">This is some placeholder content the <strong
@@ -462,7 +475,7 @@
                                 content</strong>. Clicking another tab will toggle the visibility of this one for the
                             next.
                             The tab JavaScript swaps classes to control the content visibility and styling.</p>
-                    </div>
+                    </div> -->
 
                     <div class="hidden p-4 rounded-lg" id="styled-bonuses" role="tabpanel"
                         aria-labelledby="bonuses-tab">
@@ -512,7 +525,9 @@
                     {% for casino in casinos %}
                     <div class="casino-sub flex min-w-0 gap-x-4 bg-black py-3 px-3">
                         <div class="basis-3/12 w-full max-h-[100px]">
-                            <img class="w-full h-full rounded-lg" src="{{casino.img.url}}" alt="">
+                            <a href="{{casino.url}}">
+                             <img class="w-full h-full rounded-lg" src="{{casino.img.url}}" alt="">
+                            </a>
                         </div>
                         <div class="min-w-0 basis-6/12 flex flex-col justify-center">
                             <p class="mt-1 font-medium text-base leading-5 text-zinc-50">
