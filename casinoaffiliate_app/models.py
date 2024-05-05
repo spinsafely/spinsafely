@@ -8,6 +8,13 @@ class Casino(models.Model):
     slug = models.SlugField(unique=True)
     small_description = models.TextField(null=True, blank=True)
     description = RichTextField()
+    pros = models.TextField(null=True, blank=True, verbose_name='Artılar')
+    cons = models.TextField(null=True, blank=True, verbose_name='Eksiler')
+    reliable = models.FloatField(null=True, blank=True, verbose_name='Güvenilirlik', default=4.95)
+    payment_speed = models.FloatField(null=True, blank=True, verbose_name='Ödeme Hızı', default=4.95)
+    support = models.FloatField(null=True, blank=True, verbose_name='Destek', default=4.95)
+    playable = models.FloatField(null=True, blank=True, verbose_name='Oynanabilirlik ve Kalite', default=4.95)
+    bonusses = models.FloatField(null=True, blank=True, verbose_name='Bonus ve Promosyon', default=4.95)
     url = models.URLField()
     img = models.ImageField(upload_to='') 
   

@@ -1,5 +1,5 @@
 {% extends 'casinoaffiliate_app/base.html' %}
-
+{% load casinoaffiliate_extras %}
 {% block header %}
 <header class="flex justify-center bg-black">
     {% include 'casinoaffiliate_app/parts/header.html' %}
@@ -157,31 +157,14 @@
                                     </div>
 
                                     <ul class="max-w-md space-y-1 text-base text-zinc-400 list-inside">
+                                        {% for pro in pros %}
                                         <li class="flex items-center gap-x-1">
                                             <span class="text-emerald-500 font-semibold">+</span>
-
-                                            Günlük Kodunu ve Bonusunu Al
+                                            {{pro}}
                                         </li>
-                                       <!-- <li class="flex items-center gap-x-1">
-                                            <span class="text-emerald-500 font-semibold">+</span>
+                                        {% endfor %}
 
-                                            Amazing Coverage on Football
-                                        </li>-->
-                                        <li class="flex items-center gap-x-1">
-                                            <span class="text-emerald-500 font-semibold">+</span>
-
-                                            20 Milyon+ Kayıtlı Kullanıcı
-                                        </li>
-                                        <li class="flex items-center gap-x-1">
-                                            <span class="text-emerald-500 font-semibold">+</span>
-
-                                            Global Lisans
-                                        </li>
-                                        <li class="flex items-center gap-x-1">
-                                            <span class="text-emerald-500 font-semibold">+</span>
-
-                                            Canlı Oyunlarda Yüksek Ödemeler
-                                        </li>
+                                      
                                     </ul>
 
                                 </div>
@@ -198,18 +181,12 @@
                                     </div>
 
                                     <ul class="max-w-md space-y-1 text-base text-zinc-400 list-inside">
+                                        {% for con in cons %}
                                         <li class="flex items-center gap-x-1">
                                             <span class="text-red-500 font-semibold">-</span>
-                                            Profesyonel Bahis Limiti
+                                            {{con}}
                                         </li>
-                                        <li class="flex items-center gap-x-1">
-                                            <span class="text-red-500 font-semibold">-</span>
-                                            Bahis Değişimi Yok
-                                        </li>
-                                        <li class="flex items-center gap-x-1">
-                                            <span class="text-red-500 font-semibold">-</span>
-                                            Mevcut Müşterilere Fazla Bonus Yok
-                                        </li>
+                                        {% endfor %}
                                     </ul>
 
                                 </div>
@@ -238,33 +215,33 @@
                             <div class="gap-8 sm:grid sm:grid-cols-2">
                                 <div>
                                     <dl>
-                                        <dt class="text-sm font-medium text-zinc-200">Adil Casino</dt>
+                                        <dt class="text-sm font-medium text-zinc-200">Güvenilirlik</dt>
                                         <dd class="flex items-center mb-3">
                                             <div class="w-full bg-zinc-200 rounded h-2.5 me-2">
-                                                <div class="bg-amber-600 h-2.5 rounded" style="width: 88%"></div>
+                                                <div class="bg-amber-600 h-2.5 rounded" style="width: {{casino.reliable|rating}}%"></div>
                                             </div>
                                             <span
-                                                class="text-sm font-medium text-gray-500 dark:text-gray-400">8.8</span>
+                                                class="text-sm font-medium text-gray-500 dark:text-gray-400">{{casino.reliable}}</span>
                                         </dd>
                                     </dl>
                                     <dl>
-                                        <dt class="text-sm font-medium text-zinc-200">Çekim Güvenliği</dt>
+                                        <dt class="text-sm font-medium text-zinc-200">Ödeme Hızı</dt>
                                         <dd class="flex items-center mb-3">
                                             <div class="w-full bg-zinc-200 rounded h-2.5 me-2">
-                                                <div class="bg-amber-600 h-2.5 rounded" style="width: 78%"></div>
+                                                <div class="bg-amber-600 h-2.5 rounded" style="width: {{casino.payment_speed|rating}}%"></div>
                                             </div>
                                             <span
-                                                class="text-sm font-medium text-gray-500 dark:text-gray-400">7.8</span>
+                                                class="text-sm font-medium text-gray-500 dark:text-gray-400">{{casino.payment_speed}}</span>
                                         </dd>
                                     </dl>
                                     <dl>
                                         <dt class="text-sm font-medium text-zinc-200">Promosyonlar ve Bonuslar</dt>
                                         <dd class="flex items-center mb-3">
                                             <div class="w-full bg-zinc-200 rounded h-2.5 me-2">
-                                                <div class="bg-amber-600 h-2.5 rounded" style="width: 90%"></div>
+                                                <div class="bg-amber-600 h-2.5 rounded" style="width: {{casino.bonusses|rating}}%"></div>
                                             </div>
                                             <span
-                                                class="text-sm font-medium text-gray-500 dark:text-gray-400">9.0</span>
+                                                class="text-sm font-medium text-gray-500 dark:text-gray-400">{{casino.bonusses}}</span>
                                         </dd>
                                     </dl>
                                 </div>
@@ -273,20 +250,20 @@
                                         <dt class="text-sm font-medium text-zinc-200">Oynanabilirlik ve Kalite</dt>
                                         <dd class="flex items-center mb-3">
                                             <div class="w-full bg-zinc-200 rounded h-2.5 me-2">
-                                                <div class="bg-amber-600 h-2.5 rounded" style="width: 96%"></div>
+                                                <div class="bg-amber-600 h-2.5 rounded" style="width: {{casino.playable|rating}}%"></div>
                                             </div>
                                             <span
-                                                class="text-sm font-medium text-gray-500 dark:text-gray-400">9.6</span>
+                                                class="text-sm font-medium text-gray-500 dark:text-gray-400">{{casino.playable}}</span>
                                         </dd>
                                     </dl>
                                     <dl>
                                         <dt class="text-sm font-medium text-zinc-200">Profesyonel Destek</dt>
                                         <dd class="flex items-center mb-3">
                                             <div class="w-full bg-zinc-200 rounded h-2.5 me-2">
-                                                <div class="bg-amber-600 h-2.5 rounded" style="width: 92%"></div>
+                                                <div class="bg-amber-600 h-2.5 rounded" style="width: {{casino.support|rating}}%"></div>
                                             </div>
                                             <span
-                                                class="text-sm font-medium text-gray-500 dark:text-gray-400">9.2</span>
+                                                class="text-sm font-medium text-gray-500 dark:text-gray-400">{{casino.support}}</span>
                                         </dd>
                                     </dl>
                                 </div>

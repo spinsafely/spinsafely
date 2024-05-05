@@ -2,6 +2,7 @@ from django.shortcuts import render, redirect
 from django.views.generic.base import TemplateView
 from django.contrib.auth import logout, login, authenticate
 from django.contrib.auth.forms import UserCreationForm
+from django.utils.safestring import mark_safe
 from casinoaffiliate_app.models import Casino, Bonus, AdminReview
 
 class IndexView(TemplateView):
@@ -19,6 +20,8 @@ class CasinoView(TemplateView):
     def get_context_data(self, **kwargs):
         context = super().get_context_data(**kwargs)
         context['casino'] = Casino.objects.get(slug=kwargs['slug'])
+        context['pros'] = Casino.objects.get(slug=kwargs['slug']).pros.split('\n')
+        context['cons'] = Casino.objects.get(slug=kwargs['slug']).cons.split('\n')
         context['casinos'] = Casino.objects.all()
         return context
 
