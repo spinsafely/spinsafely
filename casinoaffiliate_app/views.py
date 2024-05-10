@@ -12,7 +12,7 @@ class IndexView(TemplateView):
 
     def get(self,request, *args, **kwargs):
         context = super().get_context_data(**kwargs)
-        context['casinos'] = Casino.objects.all().order_by('-id')
+        context['casinos'] = Casino.objects.all().order_by('sort', '-id')
         return render(request, self.template_name, context)
 
 class CasinoView(TemplateView):

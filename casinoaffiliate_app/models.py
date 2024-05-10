@@ -16,7 +16,8 @@ class Casino(models.Model):
     playable = models.FloatField(null=True, blank=True, verbose_name='Oynanabilirlik ve Kalite', default=4.95)
     bonusses = models.FloatField(null=True, blank=True, verbose_name='Bonus ve Promosyon', default=4.95)
     url = models.URLField()
-    img = models.ImageField(upload_to='') 
+    img = models.ImageField(upload_to='')
+    sort = models.IntegerField(default=0)
   
     def __str__(self): 
         return self.name
