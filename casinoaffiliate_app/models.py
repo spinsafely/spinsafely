@@ -35,3 +35,11 @@ class Bonus(models.Model):
 
     def __str__(self): 
         return self.casino.name + ' - ' + self.title
+
+
+class GameAccount(models.Model):
+    user = models.ForeignKey(
+        User,
+        on_delete=models.DO_NOTHING
+    )
+    balance = models.FloatField(default=0)

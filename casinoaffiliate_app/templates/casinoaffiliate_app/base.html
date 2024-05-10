@@ -24,6 +24,18 @@
 
   <link rel="stylesheet" type="text/css" href="{% static 'casinoaffiliate_app/css/custom.css' %}">
 
+  {% block extraCSS %}
+  {% endblock %}
+  <script>
+        var auth = "{% if request.user.is_authenticated %} 1 {% else %} 0 {% endif %}";
+        var GET_BALANCE_URL = "{% url 'get-balance' %}";
+        var UPDATE_BALANCE_URL = "{% url 'update-balance' %}";
+        var CSRF_TOKEN = "{{csrf_token}}";
+  </script>
+
+{% block extraJS %}
+{% endblock %}
+
   <script src="{% static 'casinoaffiliate_app/js/jquery.min.js' %}"></script>
   <script src="{% static 'casinoaffiliate_app/js/parallax.min.js' %}"></script>
   <script src="{% static 'casinoaffiliate_app/js/swiper-bundle.min.js' %}"></script>

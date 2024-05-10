@@ -12,6 +12,10 @@ urlpatterns = [
     path("accounts/login", auth_views.LoginView.as_view(template_name="casinoaffiliate_app/login.html"), name='login'),
     path("accounts/register", views.signup, name="register"),
     path("accounts/logout/", views.logout_view, name="logout"),
+    path("game", views.GameView.as_view(), name="game"),
+    path("profile", views.ProfileView.as_view(), name="profile"),
+    path("accounts/game/balance", views.get_balance, name="get-balance"),
+    path("accounts/game/update-balance", views.update_balance, name="update-balance"),
     path(
         "robots.txt",
         TemplateView.as_view(template_name="casinoaffiliate_app/robots.txt", content_type="text/plain"),

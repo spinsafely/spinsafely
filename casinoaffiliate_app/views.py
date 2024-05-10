@@ -1,18 +1,19 @@
 from django.shortcuts import render, redirect
+from django.http.response import JsonResponse 
 from django.views.generic.base import TemplateView
 from django.contrib.auth import logout, login, authenticate
 from django.contrib.auth.forms import UserCreationForm
+from django.contrib.auth.decorators import login_required
 from django.utils.safestring import mark_safe
-from casinoaffiliate_app.models import Casino, Bonus, AdminReview
+from casinoaffiliate_app.models import Casino, Bonus, AdminReview, GameAccount
 
 class IndexView(TemplateView):
     template_name = 'casinoaffiliate_app/index.html'
 
-    def get_context_data(self, **kwargs):
+    def get(self,request, *args, **kwargs):
         context = super().get_context_data(**kwargs)
-        context['casinos'] = Casino.objects.all()
-
-        return context
+        context['casinos'] = Casino.objects.all().order_by('-id')
+        return render(request, self.template_name, context)
 
 class CasinoView(TemplateView):
     template_name = 'casinoaffiliate_app/casino.html'
@@ -27,6 +28,27 @@ class CasinoView(TemplateView):
 
 class RegisterView(TemplateView):
     template_name = 'casinoaffiliate_app/register.html'
+
+class GameView(TemplateView):
+    template_name = 'casinoaffiliate_app/game.html'
+
+    def get(self, request, *args, **kwargs):
+        context = super().get_context_data(**kwargs)
+        acc = GameAccount.objects.filter(user=request.user.id)
+
+        context['balance'] = int(acc.first().balance) if acc else 0
+        return render(request, self.template_name, context)
+
+class ProfileView(TemplateView):
+    template_name = 'casinoaffiliate_app/profile.html'
+
+    def get(self, request, *args, **kwargs):
+        context = super().get_context_data(**kwargs)
+        
+        acc = GameAccount.objects.filter(user=request.user.id)
+
+        context['balance'] = int(acc.first().balance) if acc else 0
+        return render(request, self.template_name, context)
 
 def signup(request):
     if request.method == 'POST':
@@ -45,3 +67,18 @@ def signup(request):
 def logout_view(request):
     logout(request)
     return redirect('index')
+
+@login_required
+def get_balance(request):
+    acc = GameAccount.objects.get(user=request.user)
+    return JsonResponse({'value': acc.balance, 'status': 'OK'})
+
+@login_required
+def update_balance(request):
+    if request.GET:
+        return JsonResponse({}, status=400)
+
+    acc = GameAccount.objects.get(user=request.user)
+    acc.balance = request.POST.get('bet')
+    acc.save()
+    return JsonResponse({'value': acc.balance, 'status': 'OK'})
