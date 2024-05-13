@@ -1,5 +1,5 @@
 from django.contrib import admin
-from casinoaffiliate_app.models import Casino, Bonus, AdminReview, GameAccount, GameDepositt, GameWithdrawall
+from casinoaffiliate_app.models import Casino, Bonus, AdminReview, GameAccount, GameDeposit, GameWithdrawal
 
 class CasinoAdmin(admin.ModelAdmin):
     list_display = ['name', 'sort']
@@ -8,5 +8,5 @@ admin.site.register(Casino, CasinoAdmin)
 admin.site.register(Bonus)
 admin.site.register(AdminReview)
 admin.site.register(GameAccount)
-admin.site.register(GameDepositt)
-admin.site.register(GameWithdrawall)
+admin.site.register(GameDeposit)
+admin.site.register(GameWithdrawal)
