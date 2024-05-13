@@ -5,7 +5,7 @@ from django.contrib.auth import logout, login, authenticate
 from django.contrib.auth.forms import UserCreationForm
 from django.contrib.auth.decorators import login_required
 from django.utils.safestring import mark_safe
-from casinoaffiliate_app.models import Casino, Bonus, AdminReview, GameAccount
+from casinoaffiliate_app.models import Casino, Bonus, AdminReview, GameAccount, GameDeposit, GameWithdrawal, STATUS_CHOICES
 
 class IndexView(TemplateView):
     template_name = 'casinoaffiliate_app/index.html'
@@ -45,9 +45,31 @@ class ProfileView(TemplateView):
     def get(self, request, *args, **kwargs):
         context = super().get_context_data(**kwargs)
         
-        acc = GameAccount.objects.filter(user=request.user.id)
+        acc = GameAccount.objects.filter(user=request.user)
 
         context['balance'] = int(acc.first().balance) if acc else 0
+
+        transactions = []
+        deps = GameDeposit.objects.filter(user=request.user).all()
+        if deps:
+            for dep in deps:
+                transactions.append({
+                    'amount': dep.amount,
+                    'status':  list(STATUS_CHOICES)[dep.status][1],
+                    'created_at': dep.created_at,
+                    'type': 'Yatırım'
+                })
+
+        withd = GameWithdrawal.objects.filter(user=request.user).all()
+        if withd:
+            for wit in withd:
+                transactions.append({
+                    'amount': wit.amount,
+                    'status': list(STATUS_CHOICES)[wit.status][1],
+                    'created_at': wit.created_at,
+                    'type': 'Çekim'
+                })
+        context['transactions'] = transactions
         return render(request, self.template_name, context)
 
 def signup(request):
@@ -59,6 +81,13 @@ def signup(request):
             raw_password = form.cleaned_data.get('password1')
             user = authenticate(username=username, password=raw_password)
             login(request, user)
+
+            ga = GameAccount(
+                user=user,
+                balance=50
+            )
+            ga.save()
+
             return redirect('index')
     else:
         form = UserCreationForm()
@@ -82,3 +111,32 @@ def update_balance(request):
     acc.balance = request.POST.get('bet')
     acc.save()
     return JsonResponse({'value': acc.balance, 'status': 'OK'})
+
+@login_required
+def deposit(request):
+    amount = float(request.POST.get('amount'))
+    dep = GameDeposit(
+        user=request.user,
+        trc20=request.POST.get('trc20'),
+        amount=request.POST.get('amount'),
+    )
+    dep.save()
+
+    acc = GameAccount.objects.get(user=request.user)
+    acc.balance = acc.balance - float(amount)
+    acc.save()
+
+    return JsonResponse({'value': '', 'status': 'OK'})
+
+@login_required
+def withdrawal(request):
+    amount = float(request.POST.get('amount'))
+
+    dep = GameWithdrawal(
+        user=request.user,
+        trc20=request.POST.get('trc20'),
+        amount=amount,
+    )
+    dep.save()
+
+    return JsonResponse({'value': '', 'status': 'OK'})

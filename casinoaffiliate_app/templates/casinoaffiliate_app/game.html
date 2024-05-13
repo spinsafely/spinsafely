@@ -40,7 +40,7 @@
 <script type="text/javascript" src="{% static 'casinoaffiliate_app/wheel/js/CCTLText.js' %}"></script>
 {% endblock %}
 <main class="bg-neutral-900 pb-32">
-    <section class="game p-24">
+    <section class="game">
         <script>
             $(document).ready(function () {
                 let balance = parseFloat("{{balance}}")
@@ -115,7 +115,18 @@
                     if (getParamValue('ctl-arcade') === "true") {
                         parent.__ctlArcadeShowInterlevelAD();
                     }
-                    //...ADD YOUR CODE HERE EVENTUALLY
+                    if (auth == 1){
+                        setTimeout(function() { 
+                        window.location.href = '/profile'
+                    }, 2000);
+                    }else{
+                        setTimeout(function() { 
+                        window.location.href = '/accounts/register'
+                    }, 2000);
+                    }
+
+                                
+                                    //...ADD YOUR CODE HERE EVENTUALLY
                 });
 
                 $(oMain).on("share_event", function (evt, iScore) {
@@ -142,8 +153,7 @@
             <p class="check-font-1">test 1</p>
         </div>
 
-
-        <canvas id="canvas" class='ani_hack' width="1920" height="1080"> </canvas>
+        <canvas id="canvas" class='ani_hack mx-auto'></canvas>
         <div data-orientation="landscape" class="orientation-msg-container">
             <p class="orientation-msg-text">Please rotate your device</p>
         </div>

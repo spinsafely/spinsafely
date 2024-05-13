@@ -1,5 +1,5 @@
 {% extends 'casinoaffiliate_app/base.html' %}
-
+{% load static %}
 {% block header %}
 <!-- header -->
 <header class="flex sticky top-0 z-50 bg-[#0b0f1a] backdrop-blur-md justify-center">
@@ -10,6 +10,7 @@
 {% block content %}
 <div class="page justify-content
     bg-black bg-center bg-cover bg-no-repeat bg-[url('/static/casinoaffiliate_app/imgs/bg.png')]">
+
 
     <!-- slider -->
     <div class="page-initial bg-cover bg-no-repeat bg-[url('/static/casinoaffiliate_app/imgs/slider-bg.jpg')]">
@@ -111,6 +112,13 @@
                     class="w-2/12 hidden sm:flex justify-end bg-no-repeat opacity-90 bg-bottom bg-[url('/static/casinoaffiliate_app/imgs/footerright.png')]">
                 </div> -->
             </div>
+        </section>
+
+        <section class=" h-[500px] w-full gap-x-16">
+            <a href="{% url 'game' %}">
+                <img class="w-full object-cover  " src="/static/casinoaffiliate_app/imgs/huge.gif" alt=""></a>
+        </div>
+
         </section>
 
         <!-- jumbotron  -->

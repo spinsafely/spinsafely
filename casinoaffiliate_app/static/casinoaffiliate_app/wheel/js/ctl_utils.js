@@ -165,7 +165,7 @@ function sizeHandler() {
             h = getSize("Height");
         }
         
-        var w = getSize("Width") - ((getSize("Width") * 40) / 100);
+        var w = getSize("Width") - ((getSize("Width") * 10) / 100);
 
         if(s_bFocus){
             _checkOrientation(w,h);
@@ -240,13 +240,13 @@ function sizeHandler() {
             s_oStage.scaleX = s_oStage.scaleY = s_iScaleFactor; 
         }
         
-        if(fOffsetY < 0){
-            $("#canvas").css("top",fOffsetY+"px");
-        }else{
-            // centered game
-            fOffsetY = (h - destH)/2;
-            $("#canvas").css("top",fOffsetY+"px");
-        }
+        // if(fOffsetY < 0){
+        //     $("#canvas").css("top",fOffsetY+"px");
+        // }else{
+        //     // centered game
+        //     fOffsetY = (h - destH)/2;
+        //     $("#canvas").css("top",fOffsetY+"px");
+        // }
         
         fullscreenHandler();
 };

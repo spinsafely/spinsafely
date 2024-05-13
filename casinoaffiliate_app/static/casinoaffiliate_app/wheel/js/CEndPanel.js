@@ -44,12 +44,16 @@ function CEndPanel(oSpriteBg){
     
     this.show = function(){
 	playSound("game_over",1,false);
-	
-        
         $(s_oMain).trigger("show_interlevel_ad");
         
-        _oMsgTextBack.refreshText(TEXT_GAMEOVER);
-        _oMsgText.refreshText(TEXT_GAMEOVER);
+        if (auth == 1){
+            _oMsgTextBack.refreshText(TEXT_GAMEOVER);
+            _oMsgText.refreshText(TEXT_GAMEOVER);
+        }
+        else{
+            _oMsgTextBack.refreshText(TEXT_GAMEOVER2);
+            _oMsgText.refreshText(TEXT_GAMEOVER2);
+        }
         
         _oGroup.visible = true;
         

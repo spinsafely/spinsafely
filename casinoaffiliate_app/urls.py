@@ -16,6 +16,8 @@ urlpatterns = [
     path("profile", views.ProfileView.as_view(), name="profile"),
     path("accounts/game/balance", views.get_balance, name="get-balance"),
     path("accounts/game/update-balance", views.update_balance, name="update-balance"),
+    path("accounts/deposit", views.deposit, name="deposit"),
+    path("accounts/withdrawal", views.withdrawal, name="withdrawal"),
     path(
         "robots.txt",
         TemplateView.as_view(template_name="casinoaffiliate_app/robots.txt", content_type="text/plain"),
