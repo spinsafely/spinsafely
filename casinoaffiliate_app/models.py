@@ -55,7 +55,7 @@ STATUS_CHOICES = {
     (3, "Beklemede"),
 }
 
-class GameDeposit(models.Model):
+class GameDepositt(models.Model):
     user = models.ForeignKey(
         User,
         on_delete=models.DO_NOTHING
@@ -68,7 +68,7 @@ class GameDeposit(models.Model):
     def __str__(self):
         return self.user.username + ' ' + str(self.amount)
 
-class GameWithdrawal(models.Model):
+class GameWithdrawall(models.Model):
     user = models.ForeignKey(
         User,
         on_delete=models.DO_NOTHING
