@@ -30,7 +30,7 @@ class RegisterView(TemplateView):
     template_name = 'casinoaffiliate_app/register.html'
 
 class GameView(TemplateView):
-    template_name = 'casinoaffiliate_app/game.html'
+    template_name = 'casinoaffiliate_app/wheel.html'
 
     def get(self, request, *args, **kwargs):
         context = super().get_context_data(**kwargs)
