@@ -20,7 +20,7 @@ body{
 ::-moz-selection { background: transparent;color:inherit; }
 
 #canvas{
-    position:relative ;
+    position: relative;
 }
 
 canvas {

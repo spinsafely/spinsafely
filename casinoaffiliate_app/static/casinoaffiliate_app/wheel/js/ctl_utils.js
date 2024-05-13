@@ -165,7 +165,7 @@ function sizeHandler() {
             h = getSize("Height");
         }
         
-        var w = getSize("Width") - ((getSize("Width") * 10) / 100);
+        var w = getSize("Width");
 
         if(s_bFocus){
             _checkOrientation(w,h);
@@ -239,15 +239,9 @@ function sizeHandler() {
             s_iScaleFactor = Math.min(destW / CANVAS_WIDTH, destH / CANVAS_HEIGHT);
             s_oStage.scaleX = s_oStage.scaleY = s_iScaleFactor; 
         }
+
         
-        // if(fOffsetY < 0){
-        //     $("#canvas").css("top",fOffsetY+"px");
-        // }else{
-        //     // centered game
-        //     fOffsetY = (h - destH)/2;
-        //     $("#canvas").css("top",fOffsetY+"px");
-        // }
-        
+        $("#canvas").css("left",fOffsetX+"px");
         fullscreenHandler();
 };
 

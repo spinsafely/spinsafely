@@ -39,7 +39,6 @@
 <script type="text/javascript" src="{% static 'casinoaffiliate_app/wheel/js/CCreditsPanel.js' %}"></script>
 <script type="text/javascript" src="{% static 'casinoaffiliate_app/wheel/js/CCTLText.js' %}"></script>
 {% endblock %}
-<main class="bg-neutral-900 pb-32">
     <section class="game">
         <script>
             $(document).ready(function () {
@@ -55,10 +54,8 @@
                     //PAY ATTENTION: the total sum of win occurences must be 100! 
                     //prize=0 or less, is considered as "lose". So Leds will play a lose animation.
                     wheel_settings: [
-                        { prize: 10, win_occurence: 5 }, { prize: 0, win_occurence: 20 },
-                        { prize: 20, win_occurence: 5 }, { prize: 0, win_occurence: 20 },
-                        { prize: 40, win_occurence: 5 }, { prize: 0, win_occurence: 20 },
-                        { prize: 80, win_occurence: 5 }, { prize: 0, win_occurence: 20 }
+                        { prize: 10, win_occurence: 5 }, { prize: 0, win_occurence: 45 },
+                        { prize: 80, win_occurence: 10 }, { prize: 0, win_occurence: 40 }
                     ],
 
                     anim_idle_change_frequency: 10000,  //Duration (in ms) of current led idle animation, before it change with another.
@@ -149,11 +146,7 @@
 
         </script>
 
-        <div class="check-fonts">
-            <p class="check-font-1">test 1</p>
-        </div>
-
-        <canvas id="canvas" class='ani_hack mx-auto'></canvas>
+        <canvas id="canvas" class='ani_hack'></canvas>
         <div data-orientation="landscape" class="orientation-msg-container">
             <p class="orientation-msg-text">Please rotate your device</p>
         </div>
@@ -217,5 +210,4 @@
             </div>
         </div>
     </div>
-</main>
 {% endblock %}

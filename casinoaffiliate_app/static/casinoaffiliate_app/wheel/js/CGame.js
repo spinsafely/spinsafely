@@ -134,7 +134,6 @@ function CGame(oData){
         if (auth == 0){
             return false
         }
-
         _oInterface.disableSpin(true);
         _iGameState = STATE_SPIN;
         _iTimeWin = 0;
@@ -163,7 +162,7 @@ function CGame(oData){
                   });
             }
           })
-        
+
         //DETECT ALL POSSIBLE PRIZE LOWER THEN BANK
         var iCurPrize;
         var aAllPossiblePrize = new Array();
@@ -193,7 +192,7 @@ function CGame(oData){
         _oWheel.setText(_iMultiply);
         
         //SPIN
-        _oWheel.spin(iRotValue, iTimeMult)
+        _oWheel.spin(iRotValue, iTimeMult);
         
         $(s_oMain).trigger("bet_placed",_iCurBet);
     };                 
@@ -219,7 +218,6 @@ function CGame(oData){
         
         $(s_oMain).trigger("save_score",[_iCurCredit]);
         
-
         _oInterface.refreshCredit(_iCurCredit);
 		
         _oInterface.animWin();
