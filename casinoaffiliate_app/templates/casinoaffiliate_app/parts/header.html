@@ -41,7 +41,7 @@
 
   {% if request.user.is_authenticated %}
   <div class="hidden md:flex col-span-2 justify-end items-center basis-full gap-x-4">
-    <a href="" class="text-white bg-amber-600 p-2 px-3 rounded-xl ">
+    <a href="{% url 'profile' %}" class="text-white bg-amber-600 p-2 px-3 rounded-xl ">
       <span>Panel</span>
     </a>
     <a href="{% url 'logout' %}">

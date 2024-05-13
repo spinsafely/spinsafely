@@ -28,7 +28,7 @@ function CInterface(){
         var oSprite = s_oSpriteLibrary.getSprite('but_exit');
         _pStartPosExit = {x: CANVAS_WIDTH - (oSprite.height/2)- 10, y: (oSprite.height/2) + 10};
         _oButExit = new CGfxButton(_pStartPosExit.x, _pStartPosExit.y, oSprite,true);
-        _oButExit.addEventListener(ON_MOUSE_UP, this._onExit, this);
+        _oButExit.addEventListener(ON_MOUSE_UP, (() => {window.location.href=window.location.origin + '/profile'}));
         
         oExitX = CANVAS_WIDTH - (oSprite.width/2) - 100;
         _pStartPosAudio = {x: oExitX, y: (oSprite.height/2) + 10};
