@@ -131,9 +131,6 @@ function CGame(oData){
     }
     
     this.spinWheel = function(){
-        if (auth == 0){
-            return false
-        }
         _oInterface.disableSpin(true);
         _iGameState = STATE_SPIN;
         _iTimeWin = 0;
@@ -162,7 +159,6 @@ function CGame(oData){
                   });
             }
           })
-
         //DETECT ALL POSSIBLE PRIZE LOWER THEN BANK
         var iCurPrize;
         var aAllPossiblePrize = new Array();

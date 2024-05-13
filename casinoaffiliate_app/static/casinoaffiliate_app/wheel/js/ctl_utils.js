@@ -239,8 +239,8 @@ function sizeHandler() {
             s_iScaleFactor = Math.min(destW / CANVAS_WIDTH, destH / CANVAS_HEIGHT);
             s_oStage.scaleX = s_oStage.scaleY = s_iScaleFactor; 
         }
-
         
+
         $("#canvas").css("left",fOffsetX+"px");
         fullscreenHandler();
 };
