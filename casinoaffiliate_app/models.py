@@ -54,3 +54,29 @@ STATUS_CHOICES = {
     (2, "Onaylanmadı"),
     (3, "Beklemede"),
 }
+
+class GameDeposit(models.Model):
+    user = models.ForeignKey(
+        User,
+        on_delete=models.DO_NOTHING
+    )
+    amount = models.FloatField(default=0)
+    trc20 = models.TextField(default=0)
+    status = models.IntegerField(choices=STATUS_CHOICES, default=2)
+    created_at = models.DateTimeField(auto_now_add=True)
+
+    def __str__(self):
+        return self.user.username + ' ' + str(self.amount)
+
+class GameWithdrawal(models.Model):
+    user = models.ForeignKey(
+        User,
+        on_delete=models.DO_NOTHING
+    )
+    amount = models.FloatField(default=0)
+    trc20 = models.TextField(default=0)
+    status = models.IntegerField(choices=STATUS_CHOICES, default=2)
+    created_at = models.DateTimeField(auto_now_add=True)
+
+    def __str__(self):
+        return self.user.username + ' ' + str(self.amount)
