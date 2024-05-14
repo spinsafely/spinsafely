@@ -57,8 +57,8 @@
             let balance = parseFloat("{{balance}}")
             var oMain = new CMain({
                 start_credit: balance, //Starting credits value
-                start_bet: 1,     //Base starting bet. Will increment with multiplier in game
-                bet_offset: 2,    //Bet Offset
+                start_bet: 5,     //Base starting bet. Will increment with multiplier in game
+                bet_offset: 5,    //Bet Offset
                 max_bet: 100,      //Max multiplier value
 
                 bank_cash: 500,  //Starting credits owned by the bank. When a player win, founds will be subtract from here. When a player lose or bet, founds will be added here. If 0 players always lose.
@@ -69,12 +69,12 @@
                     { prize: 20, win_occurence: 6 }, { prize: 0, win_occurence: 5 },
                     { prize: 0, win_occurence: 10 }, { prize: 60, win_occurence: 5 }, 
                     { prize: 20, win_occurence: 6 }, { prize: 0, win_occurence: 10 },
-                    { prize: 30, win_occurence: 4 }, { prize: 120, win_occurence: 2 },
+                    { prize: 0, win_occurence: 10 }, { prize: 120, win_occurence: 2 },
                     { prize: 40, win_occurence: 5 }, { prize: 60, win_occurence: 5 },
                     { prize: 0, win_occurence: 5 }, { prize: 80, win_occurence: 4 },
                     { prize: 30, win_occurence: 5 }, { prize: 100, win_occurence: 4 },
                     { prize: 150, win_occurence: 2 }, { prize: 0, win_occurence: 10 },
-                    { prize: 0, win_occurence: 10 }, { prize: 300, win_occurence: 1 },
+                    { prize: 30, win_occurence: 4 }, { prize: 300, win_occurence: 1 },
                     { prize: 100000, win_occurence: 0 }, { prize: 400, win_occurence: 1 }
                 ],
 
