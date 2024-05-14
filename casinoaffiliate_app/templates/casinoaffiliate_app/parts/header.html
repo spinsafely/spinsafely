@@ -86,17 +86,16 @@
 
     <div class="flex justify-center items-center gap-x-16">
       {% if request.user.is_authenticated %}
-      <a href="" class="text-white">
-        <span class="fa-solid fa-user"></span>
-        <span>{{user}}</span>
+      <a href="{% url 'profile' %}" class="text-white bg-amber-600 p-2 px-3 rounded-xl ">
+        <span>Panel</span>
       </a>
-      <i class="fa-solid fa-right-from-bracket"></i>
+      <i class="fa-solid fa-right-from-bracket text-white"></i>
       {% else %}
       <a href="{% url 'login' %}" class="text-white">
-        <span>Log In</span>
+        <span>Giriş</span>
       </a>
       <a href="{% url 'register' %}" class="font-medium text-white bg-amber-400 px-2 py-2 rounded-lg">
-        <span>Sign Up</span>
+        <span>Kayıt Ol</span>
       </a>
       {% endif %}
     </div>

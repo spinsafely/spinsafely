@@ -33,6 +33,7 @@ function CGame(oData){
         _iAdCounter = 0;
         _iBankCash = BANK_CASH;
 
+
         _aProbability = new Array();
         var iCount=0;
         for(var i=0; i<WHEEL_SETTINGS.length; i++){
@@ -134,7 +135,7 @@ function CGame(oData){
         _oInterface.disableSpin(true);
         _iGameState = STATE_SPIN;
         _iTimeWin = 0;
-        
+        stopSound("menu",1,false);
         this.setNewRound();
         
         _oInterface.refreshMoney(0);

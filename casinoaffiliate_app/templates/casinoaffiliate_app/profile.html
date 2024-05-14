@@ -1,7 +1,13 @@
-{% extends 'casinoaffiliate_app/base.html' %} {% block content %}
-<header class="flex justify-center bg-black">
+{% extends 'casinoaffiliate_app/base.html' %} 
+
+{% block header %}
+<!-- header -->
+<header class="flex sticky top-0 z-50 bg-[#0b0f1a] backdrop-blur-md justify-center">
     {% include 'casinoaffiliate_app/parts/header.html' %}
 </header>
+{% endblock %}
+{% block content %}
+
 
 <main class="min-h-screen py-8 bg-zinc-900">
     <div class="flex flex-col w-full md:w-6/12 m-auto">

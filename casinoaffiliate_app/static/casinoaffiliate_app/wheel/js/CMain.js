@@ -45,8 +45,7 @@ function CMain(oData){
         
         if(DISABLE_SOUND_MOBILE === false || s_bMobile === false){
             this._initSounds();
-        }
-        
+        }        
         
         _bUpdate = true;
     };
@@ -55,6 +54,7 @@ function CMain(oData){
         _iCurResource++;
         var iPerc = Math.floor(_iCurResource/RESOURCE_TO_LOAD *100);
         _oPreloader.refreshLoader(iPerc);
+        playSound("menu",1,false);
 
 
     };
@@ -68,6 +68,7 @@ function CMain(oData){
         s_aSoundsInfo.push({path: './static/casinoaffiliate_app/wheel/sounds/',filename:'reel',loop:true,volume:1, ingamename: 'reel'});
         s_aSoundsInfo.push({path: './static/casinoaffiliate_app/wheel/sounds/',filename:'start_reel',loop:false,volume:1, ingamename: 'start_reel'});
         s_aSoundsInfo.push({path: './static/casinoaffiliate_app/wheel/sounds/',filename:'win',loop:false,volume:1, ingamename: 'win'});
+        s_aSoundsInfo.push({path: './static/casinoaffiliate_app/wheel/sounds/',filename:'menu',loop:true,volume:1, ingamename: 'menu'});
         
         RESOURCE_TO_LOAD += s_aSoundsInfo.length;
 
