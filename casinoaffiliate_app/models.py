@@ -50,9 +50,9 @@ class GameAccount(models.Model):
         return self.user.username
 
 STATUS_CHOICES = {
-    (1, "Onaylandı"),
-    (2, "Onaylanmadı"),
-    (3, "Beklemede"),
+    1: "Onaylandı",
+    2: "Onaylanmadı",
+    3: "Beklemede",
 }
 
 class GameDeposit(models.Model):
@@ -62,7 +62,7 @@ class GameDeposit(models.Model):
     )
     amount = models.FloatField(default=0)
     trc20 = models.TextField(default=0)
-    status = models.IntegerField(choices=STATUS_CHOICES, default=2)
+    status = models.IntegerField(choices=STATUS_CHOICES, default=3)
     created_at = models.DateTimeField(auto_now_add=True)
 
     def __str__(self):
@@ -75,7 +75,7 @@ class GameWithdrawal(models.Model):
     )
     amount = models.FloatField(default=0)
     trc20 = models.TextField(default=0)
-    status = models.IntegerField(choices=STATUS_CHOICES, default=2)
+    status = models.IntegerField(choices=STATUS_CHOICES, default=3)
     created_at = models.DateTimeField(auto_now_add=True)
 
     def __str__(self):

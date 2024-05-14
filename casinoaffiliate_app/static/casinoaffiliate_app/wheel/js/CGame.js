@@ -158,7 +158,7 @@ function CGame(oData){
                     }
                   });
             }
-          })
+        })
         //DETECT ALL POSSIBLE PRIZE LOWER THEN BANK
         var iCurPrize;
         var aAllPossiblePrize = new Array();

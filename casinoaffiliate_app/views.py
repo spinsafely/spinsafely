@@ -55,7 +55,7 @@ class ProfileView(TemplateView):
             for dep in deps:
                 transactions.append({
                     'amount': dep.amount,
-                    'status':  list(STATUS_CHOICES)[dep.status][1],
+                    'status':  STATUS_CHOICES[dep.status],
                     'created_at': dep.created_at,
                     'type': 'Yatırım'
                 })
@@ -63,9 +63,10 @@ class ProfileView(TemplateView):
         withd = GameWithdrawal.objects.filter(user=request.user).all()
         if withd:
             for wit in withd:
+                print(wit.status)
                 transactions.append({
                     'amount': wit.amount,
-                    'status': list(STATUS_CHOICES)[wit.status][1],
+                    'status': STATUS_CHOICES[wit.status],
                     'created_at': wit.created_at,
                     'type': 'Çekim'
                 })
@@ -131,10 +132,18 @@ def deposit(request):
 @login_required
 def withdrawal(request):
     amount = float(request.POST.get('amount'))
+    acc = GameAccount.objects.get(user=request.user)
+
+    if acc.balance > 0:
+        acc.balance = float(acc.balance) - amount
+        acc.save()
+    else:
+        return JsonResponse({'value': '', 'status': 'OK'}, status=404)
 
     dep = GameWithdrawal(
         user=request.user,
         trc20=request.POST.get('trc20'),
+        status=3,
         amount=amount,
     )
     dep.save()

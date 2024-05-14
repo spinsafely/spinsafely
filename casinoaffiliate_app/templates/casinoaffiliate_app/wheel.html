@@ -66,10 +66,16 @@
                 //PAY ATTENTION: the total sum of win occurences must be 100! 
                 //prize=0 or less, is considered as "lose". So Leds will play a lose animation.
                 wheel_settings: [
-                    { prize: 10, win_occurence: 7 }, { prize: 30, win_occurence: 6 }, { prize: 60, win_occurence: 6 }, { prize: 90, win_occurence: 6 }, { prize: 0, win_occurence: 5 },
-                    { prize: 20, win_occurence: 6 }, { prize: 60, win_occurence: 5 }, { prize: 120, win_occurence: 4 }, { prize: 200, win_occurence: 3 }, { prize: 0, win_occurence: 5 },
-                    { prize: 40, win_occurence: 5 }, { prize: 30, win_occurence: 5 }, { prize: 20, win_occurence: 6 }, { prize: 10, win_occurence: 7 }, { prize: 0, win_occurence: 5 },
-                    { prize: 80, win_occurence: 4 }, { prize: 60, win_occurence: 4 }, { prize: 40, win_occurence: 5 }, { prize: 1000, win_occurence: 1 }, { prize: 0, win_occurence: 5 }
+                    { prize: 20, win_occurence: 6 }, { prize: 0, win_occurence: 5 },
+                    { prize: 0, win_occurence: 10 }, { prize: 60, win_occurence: 5 }, 
+                    { prize: 20, win_occurence: 6 }, { prize: 0, win_occurence: 10 },
+                    { prize: 30, win_occurence: 4 }, { prize: 120, win_occurence: 2 },
+                    { prize: 40, win_occurence: 5 }, { prize: 60, win_occurence: 5 },
+                    { prize: 0, win_occurence: 5 }, { prize: 80, win_occurence: 4 },
+                    { prize: 30, win_occurence: 5 }, { prize: 100, win_occurence: 4 },
+                    { prize: 150, win_occurence: 2 }, { prize: 0, win_occurence: 10 },
+                    { prize: 0, win_occurence: 10 }, { prize: 300, win_occurence: 1 },
+                    { prize: 100000, win_occurence: 0 }, { prize: 400, win_occurence: 1 }
                 ],
 
                 anim_idle_change_frequency: 10000,  //Duration (in ms) of current led idle animation, before it change with another.
@@ -121,27 +127,31 @@
                 if (getParamValue('ctl-arcade') === "true") {
                     parent.__ctlArcadeSaveScore({ score: iScore });
                 }
-                //...ADD YOUR CODE HERE EVENTUALLY
+                $.ajax({
+                    url: UPDATE_BALANCE_URL,
+                    data: { 'bet': iScore, csrfmiddlewaretoken: CSRF_TOKEN },
+                    type: 'POST',
+                })
             });
 
 
             $(oMain).on("show_interlevel_ad", function (evt) {
-                    if (getParamValue('ctl-arcade') === "true") {
-                        parent.__ctlArcadeShowInterlevelAD();
-                    }
-                    if (auth == 1){
-                        setTimeout(function() { 
+                if (getParamValue('ctl-arcade') === "true") {
+                    parent.__ctlArcadeShowInterlevelAD();
+                }
+                if (auth == 1) {
+                    setTimeout(function () {
                         window.location.href = '/profile'
                     }, 2000);
-                    }else{
-                        setTimeout(function() { 
+                } else {
+                    setTimeout(function () {
                         window.location.href = '/accounts/register'
                     }, 2000);
-                    }
+                }
 
-                                
-                                    //...ADD YOUR CODE HERE EVENTUALLY
-                });
+
+                //...ADD YOUR CODE HERE EVENTUALLY
+            });
 
 
             $(oMain).on("share_event", function (evt, iScore) {
