@@ -54,9 +54,6 @@ function CMain(oData){
         _iCurResource++;
         var iPerc = Math.floor(_iCurResource/RESOURCE_TO_LOAD *100);
         _oPreloader.refreshLoader(iPerc);
-        playSound("menu",1,false);
-
-
     };
     
     this._initSounds = function(){
@@ -240,7 +237,7 @@ function CMain(oData){
 }
 var s_bMobile;
 var s_bEasyMode;
-var s_bAudioActive = false;
+var s_bAudioActive = true;
 var s_iCntTime = 0;
 var s_iTimeElaps = 0;
 var s_iPrevTime = 0;

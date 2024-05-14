@@ -14,6 +14,8 @@ function CMenu(){
     var _pStartPosFullscreen;
     
     this._init = function(){
+        playSound("menu",1,true);
+
         _oBg = createBitmap(s_oSpriteLibrary.getSprite('bg_menu'));
         s_oStage.addChild(_oBg);
 
