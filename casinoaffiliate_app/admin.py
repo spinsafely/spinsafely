@@ -4,9 +4,12 @@ from casinoaffiliate_app.models import Casino, Bonus, AdminReview, GameAccount, 
 class CasinoAdmin(admin.ModelAdmin):
     list_display = ['name', 'sort']
 
+class GameAccountAdmin(admin.ModelAdmin):
+    list_display = ['user', 'created_at']
+
 admin.site.register(Casino, CasinoAdmin)
 admin.site.register(Bonus)
 admin.site.register(AdminReview)
-admin.site.register(GameAccount)
+admin.site.register(GameAccount,GameAccountAdmin)
 admin.site.register(GameDeposit)
 admin.site.register(GameWithdrawal)

@@ -2,6 +2,7 @@ from django.db import models
 from enum import Enum
 from django.contrib.auth.models import User
 from ckeditor.fields import RichTextField
+from datetime import datetime
 
 
 class Casino(models.Model): 
@@ -45,6 +46,7 @@ class GameAccount(models.Model):
         on_delete=models.DO_NOTHING
     )
     balance = models.FloatField(default=0)
+    created_at=models.DateTimeField(default=datetime.now())
 
     def __str__(self):
         return self.user.username
