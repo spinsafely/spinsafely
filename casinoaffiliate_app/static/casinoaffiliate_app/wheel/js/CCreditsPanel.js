@@ -48,7 +48,7 @@ function CCreditsPanel(){
         oLogo.y = CANVAS_HEIGHT/2;
         _oContainer.addChild(oLogo);
         
-        _oLink = new createjs.Text("WWW.CODETHISLAB.COM","35px "+PRIMARY_FONT, "#ffffff");
+        _oLink = new createjs.Text("WWW.SPINSAFELY.COM","35px "+PRIMARY_FONT, "#ffffff");
         _oLink.x = CANVAS_WIDTH/2;
         _oLink.y = 820;
         _oLink.textAlign = "center";
@@ -65,7 +65,7 @@ function CCreditsPanel(){
     };
     
     this._onLogoButRelease = function(){
-        window.open("https://www.codethislab.com/","_blank");
+        window.open("https://www.spinsafely.com/","_blank");
     };
     
     this._init();
