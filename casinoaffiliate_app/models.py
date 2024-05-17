@@ -57,6 +57,11 @@ STATUS_CHOICES = {
     3: "Beklemede",
 }
 
+TRANSACTION_CHOICES = {
+    1: "Bet",
+    2: "Result",
+}
+
 class GameDeposit(models.Model):
     user = models.ForeignKey(
         User,
@@ -78,6 +83,19 @@ class GameWithdrawal(models.Model):
     amount = models.FloatField(default=0)
     trc20 = models.TextField(default=0)
     status = models.IntegerField(choices=STATUS_CHOICES, default=3)
+    created_at = models.DateTimeField(auto_now_add=True)
+
+    def __str__(self):
+        return self.user.username + ' ' + str(self.amount)
+
+
+class GameTransaction(models.Model):
+    user = models.ForeignKey(
+        User,
+        on_delete=models.DO_NOTHING
+    )
+    amount = models.FloatField()
+    status = models.IntegerField(choices=TRANSACTION_CHOICES, default=1)
     created_at = models.DateTimeField(auto_now_add=True)
 
     def __str__(self):

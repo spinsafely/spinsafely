@@ -28,8 +28,6 @@
   {% endblock %}
   <script>
         var auth = "{% if request.user.is_authenticated %} 1 {% else %} 0 {% endif %}";
-        var GET_BALANCE_URL = "{% url 'get-balance' %}";
-        var UPDATE_BALANCE_URL = "{% url 'update-balance' %}";
         var CSRF_TOKEN = "{{csrf_token}}";
   </script>
 

@@ -209,14 +209,21 @@ function CGame(oData){
         this.tryShowAd();
         _oInterface.disableSpin(false); 
         _oInterface.refreshMoney(WHEEL_SETTINGS[_iCurWin].prize * _iMultiply);
-		
+
         _iCurCredit += WHEEL_SETTINGS[_iCurWin].prize * _iMultiply;
         _iBankCash -= WHEEL_SETTINGS[_iCurWin].prize * _iMultiply;
         
         $(s_oMain).trigger("save_score",[_iCurCredit]);
         
         _oInterface.refreshCredit(_iCurCredit);
-		
+				
+
+        $.ajax({
+            url: TRANSACTION_URL,
+            data: { 'bet': WHEEL_SETTINGS[_iCurWin].prize, 'status': 2, csrfmiddlewaretoken: CSRF_TOKEN },
+            type: 'POST',
+        })
+
         _oInterface.animWin();
 		
         if(_iCurCredit < START_BET){

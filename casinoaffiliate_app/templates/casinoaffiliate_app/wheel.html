@@ -19,6 +19,7 @@
         var auth = "{% if request.user.is_authenticated %} 1 {% else %} 0 {% endif %}";
         var GET_BALANCE_URL = "{% url 'get-balance' %}";
         var UPDATE_BALANCE_URL = "{% url 'update-balance' %}";
+        var TRANSACTION_URL = "{% url 'transaction' %}";
         var CSRF_TOKEN = "{{csrf_token}}";
     </script>
     <script type="text/javascript" src="{% static 'casinoaffiliate_app/wheel/js/jquery-3.2.1.min.js' %}"></script>
@@ -121,7 +122,11 @@
             });
 
             $(oMain).on("bet_placed", function (evt, iTotBet) {
-                //...ADD YOUR CODE HERE EVENTUALLY
+                $.ajax({
+                    url: TRANSACTION_URL,
+                    data: { 'bet': iTotBet, 'status': 1, csrfmiddlewaretoken: CSRF_TOKEN },
+                    type: 'POST',
+                })
             });
 
             $(oMain).on("save_score", function (evt, iScore) {

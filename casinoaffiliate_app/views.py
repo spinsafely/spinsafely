@@ -5,7 +5,7 @@ from django.contrib.auth import logout, login, authenticate
 from django.contrib.auth.forms import UserCreationForm
 from django.contrib.auth.decorators import login_required
 from django.utils.safestring import mark_safe
-from casinoaffiliate_app.models import Casino, Bonus, AdminReview, GameAccount, GameDeposit, GameWithdrawal, STATUS_CHOICES
+from casinoaffiliate_app.models import Casino, Bonus, GameTransaction, AdminReview, GameAccount, GameDeposit, GameWithdrawal, STATUS_CHOICES
 
 class IndexView(TemplateView):
     template_name = 'casinoaffiliate_app/index.html'
@@ -147,5 +147,23 @@ def withdrawal(request):
         amount=amount,
     )
     dep.save()
+
+    return JsonResponse({'value': '', 'status': 'OK'})
+
+@login_required
+def transaction(request):
+    amount = float(request.POST.get('bet'))
+    status = float(request.POST.get('status'))
+    acc = GameAccount.objects.get(user=request.user)
+
+    if not acc:
+        return JsonResponse({'value': '', 'status': 'OK'}, status=404)
+
+    trans = GameTransaction(
+        user=request.user,
+        status=status,
+        amount=amount,
+    )
+    trans.save()
 
     return JsonResponse({'value': '', 'status': 'OK'})
