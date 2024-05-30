@@ -589,6 +589,16 @@ $(document).ready(function(){
                 800 //speed
             );
         });
+    
+    $("li#contact").click(function (e) {
+            e.preventDefault()
+            $("html").animate(
+                {
+                    scrollTop: $("footer#contact").offset().top
+                },
+                800 //speed
+            );
+        });
     });
 </script>
 
