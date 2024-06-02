@@ -85,7 +85,7 @@ def signup(request):
 
             ga = GameAccount(
                 user=user,
-                balance=50
+                balance=100
             )
             ga.save()
 
