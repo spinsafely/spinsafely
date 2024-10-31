@@ -25,7 +25,7 @@ SECRET_KEY = "django-insecure-@n_nnd0l40#yqe*i)njwov4q^pp@lg6lem-ln1*b4(ga=j2)sl
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['spinsafely.com', 'www.spinsafely.com', '64.7.199.183', '127.0.0.1']
+ALLOWED_HOSTS = ['spinsafelys.com', 'www.spinsafelys.com', '172.86.69.43', '127.0.0.1']
 
 
 # Application definition
